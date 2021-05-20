@@ -1,0 +1,262 @@
+/* audio only */
+
+.rmp-audio-only .rmp-title-area,
+.rmp-audio-only .rmp-module:not(.rmp-cast):not(.rmp-airplay),
+.rmp-audio-only .rmp-overlay-button,
+.rmp-audio-only .rmp-mobile-central-ui,
+.rmp-audio-only .rmp-indicator,
+.rmp-audio-only .rmp-fullscreen {
+  display: none !important;
+}
+
+/* do not auto hide controls bar */
+.rmp-audio-only .rmp-control-bar {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* error when audioOnly */
+.rmp-audio-only .rmp-error-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: @black;
+  color: @white;
+  height: 100%;
+  width: 100%;
+  line-height: 40px;
+  padding: 0;
+  border: none;
+  z-index: 1000;
+  margin-top: 0;
+  font-size: 14px;
+  .transform(none);
+}
+
+.rmp-audio-only.rmp-extrasmall .rmp-error-text {
+  font-size: 14px;
+}
+
+/* play/pause */
+.rmp-audio-only.rmp-small .rmp-play-pause {
+  width: 10%;
+}
+
+.rmp-audio-only.rmp-extrasmall .rmp-play-pause {
+  width: 12%;
+}
+
+.rmp-audio-only.rmp-mobile.rmp-small .rmp-play-pause,
+.rmp-audio-only.rmp-mobile.rmp-extrasmall .rmp-play-pause {
+  display: block;
+}
+
+/* time elapsed */
+.rmp-audio-only .rmp-time-elapsed {
+  left: 10%;
+}
+
+.rmp-audio-only.rmp-small .rmp-time-elapsed,
+.rmp-audio-only.rmp-extrasmall .rmp-time-elapsed {
+  bottom: 0;
+  height: 100%;
+  line-height: 40px;
+  background: transparent;
+}
+
+.rmp-audio-only.rmp-small .rmp-time-elapsed {
+  left: 10%;
+  width: 12%;
+}
+
+.rmp-audio-only.rmp-extrasmall .rmp-time-elapsed {
+  left: 12%;
+  width: 16%;
+}
+
+/* Volume icon (audio-only) .rmp-audio-only-volume-icon class is only found when audioOnly: true */
+.rmp-audio-only-volume-icon {
+  position: absolute;
+  left: 70%;
+  width: 10%;
+  min-width: 22px;
+  height: 100%;
+  cursor: pointer;
+}
+
+.rmp-cast-available .rmp-audio-only-volume-icon,
+.rmp-airplay-available .rmp-audio-only-volume-icon {
+  left: 60%;
+}
+
+.rmp-extrasmall .rmp-audio-only-volume-icon {
+  left: 88%;
+  width: 12%;
+}
+
+.rmp-cast-available.rmp-extrasmall .rmp-audio-only-volume-icon,
+.rmp-airplay-available.rmp-extrasmall .rmp-audio-only-volume-icon {
+  left: 76%;
+}
+
+/* seek bar */
+.rmp-audio-only .rmp-seek-bar {
+  left: 22%;
+  width: 36%;
+}
+
+.rmp-audio-only.rmp-airplay-available .rmp-seek-bar,
+.rmp-audio-only.rmp-cast-available .rmp-seek-bar {
+  left: 22%;
+  width: 26%;
+}
+
+.rmp-audio-only.rmp-small .rmp-seek-bar {
+  left: 24%;
+  width: 32%;
+}
+
+.rmp-audio-only.rmp-extrasmall .rmp-seek-bar {
+  width: 40%;
+  left: 30%;
+}
+
+.rmp-audio-only.rmp-cast-available.rmp-small .rmp-seek-bar,
+.rmp-audio-only.rmp-airplay-available.rmp-small .rmp-seek-bar {
+  width: 22%;
+}
+
+.rmp-audio-only.rmp-cast-available.rmp-extrasmall .rmp-seek-bar,
+.rmp-audio-only.rmp-airplay-available.rmp-extrasmall .rmp-seek-bar {
+  width: 28%;
+}
+
+/* duration */
+.rmp-audio-only .rmp-duration {
+  left: 60%;
+}
+
+.rmp-audio-only.rmp-cast-available .rmp-duration,
+.rmp-audio-only.rmp-airplay-available .rmp-duration {
+  left: 50%;
+}
+
+.rmp-audio-only.rmp-small .rmp-duration {
+  bottom: 0;
+  width: 12%;
+  height: 100%;
+  line-height: 40px;
+  left: 58%;
+  background: transparent;
+  margin-left: 0;
+}
+
+.rmp-audio-only.rmp-extrasmall .rmp-duration {
+  bottom: 0;
+  width: 16%;
+  height: 100%;
+  line-height: 40px;
+  left: 72%;
+  background: transparent;
+  margin-left: 0;
+}
+
+.rmp-audio-only.rmp-cast-available.rmp-small .rmp-duration,
+.rmp-audio-only.rmp-airplay-available.rmp-small .rmp-duration {
+  left: 48%;
+}
+
+.rmp-audio-only.rmp-cast-available.rmp-extrasmall .rmp-duration,
+.rmp-audio-only.rmp-airplay-available.rmp-extrasmall .rmp-duration {
+  left: 60%;
+}
+
+/* +/- icons */
+.rmp-audio-only .rmp-i-minus {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  width: 10%;
+  height: 100%;
+  left: 80%;
+}
+
+.rmp-audio-only.rmp-cast-available .rmp-i-minus,
+.rmp-audio-only.rmp-airplay-available .rmp-i-minus {
+  left: 70%;
+}
+
+.rmp-audio-only .rmp-i-plus {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  width: 10%;
+  height: 100%;
+  left: 90%;
+}
+
+.rmp-audio-only.rmp-cast-available .rmp-i-plus,
+.rmp-audio-only.rmp-airplay-available .rmp-i-plus {
+  left: 80%;
+}
+
+.rmp-extrasmall.rmp-audio-only .rmp-i-minus,
+.rmp-extrasmall.rmp-audio-only .rmp-i-plus {
+  display: none;
+}
+
+.rmp-audio-only-use-video-layout .rmp-poster {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* ad info with audioOnly */
+.rmp-audio-only .rmp-ad-info,
+.rmp-audio-only.rmp-small .rmp-ad-info {
+  left: 10%;
+}
+
+.rmp-audio-only.rmp-extrasmall .rmp-ad-info {
+  left: 12%;
+}
+
+.rmp-audio-only.rmp-mobile.rmp-small .rmp-ad-info {
+  left: 10%;
+}
+
+.rmp-audio-only.rmp-mobile.rmp-extrasmall .rmp-ad-info {
+  left: 12%;
+}
+
+/* Google Cast/AirPlay for audio-only */
+.rmp-audio-only.rmp-cast-available .rmp-module.rmp-cast,
+.rmp-audio-only.rmp-airplay-available .rmp-module.rmp-airplay {
+  opacity: 1;
+  visibility: visible;
+  top: 0;
+  left: 90%;
+  width: 10%;
+  height: 40px;
+  background: transparent !important;
+}
+
+.rmp-audio-only.rmp-cast-available.rmp-extrasmall .rmp-module.rmp-cast,
+.rmp-audio-only.rmp-airplay-available.rmp-extrasmall .rmp-module.rmp-airplay {
+  left: 88%;
+  width: 12%;
+}
+
+.rmp-audio-only.rmp-cast-available .rmp-module.rmp-cast .rmp-module-button,
+.rmp-audio-only.rmp-airplay-available
+  .rmp-module.rmp-airplay
+  .rmp-module-button {
+  width: 100%;
+  height: 40px;
+}
+
+.rmp-audio-only.rmp-cast-available .rmp-module.rmp-cast .rmp-hint,
+.rmp-audio-only.rmp-airplay-available .rmp-module.rmp-airplay .rmp-hint,
+.rmp-audio-only.rmp-cast-available .rmp-cast-diplay-message-area {
+  display: none !important;
+}

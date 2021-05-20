@@ -1,0 +1,101 @@
+/* error UI */
+.rmp-error-ui .rmp-module,
+.rmp-error-ui .rmp-poster,
+.rmp-error-ui .rmp-mobile-central-ui,
+.rmp-error-ui .rmp-overlay-button,
+.rmp-error-ui .rmp-loading-spin,
+.rmp-error-ui .rmp-title-area {
+  display: none !important;
+}
+
+/* no playback support and
+ * error detected 
+ */
+.rmp-error {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: block;
+  background: @black;
+}
+
+.rmp-error-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: @black;
+  color: @white;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid @white;
+  margin-top: 40px;
+  min-width: 60%;
+  .border-radius(4px);
+  .box-shadow(0 3px 8px @shadow-4);
+  .transform-translate();
+}
+
+.rmp-no-play-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: @black;
+  color: @white;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid @white;
+  min-width: 60%;
+  .border-radius(4px);
+  .box-shadow(0 3px 8px @shadow-4);
+  .transform-translate();
+}
+
+.rmp-audio-only .rmp-no-play-text {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  line-height: 32px;
+  padding: 4px;
+  font-size: 14px;
+  border: none;
+  .transform(none);
+}
+
+.rmp-no-play-text > div + div {
+  margin-top: 10px;
+}
+
+.rmp-dl-link {
+  font-size: 14px;
+}
+
+.rmp-dl-link:link {
+  color: @blue;
+}
+
+.rmp-dl-link:visited {
+  color: @blueHover;
+}
+
+.rmp-dl-link:focus {
+  outline: none;
+  .box-shadow(0 0 0 1px @blue);
+}
+
+.rmp-dl-link:hover,
+.rmp-dl-link:active {
+  color: @blueHover;
+}
+
+.rmp-error > .rmp-i-exclamation {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 80px;
+  margin-left: -40px;
+  margin-top: -74px;
+  color: @white;
+}

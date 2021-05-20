@@ -1,0 +1,63 @@
+/* s2 specific CSS */
+@background: rgba(0, 0, 0, 0.85);
+@button: rgba(255, 255, 255, 1);
+@accent: rgba(255, 110, 64, 1);
+@accent-light: rgba(255, 110, 64, 0.7);
+
+/* border-radius adjustment */
+.rmp-handle,
+.rmp-time-total,
+.rmp-current,
+.rmp-loaded,
+.rmp-playlist-right-arrow,
+.rmp-playlist-left-arrow {
+  .border-radius(0);
+}
+
+/* seek-bar adjustment */
+.rmp-time-total {
+  top: 14px;
+  height: 12px;
+  .box-shadow(none);
+}
+
+.rmp-desktop-volume-bar-container {
+  left: 14px;
+  width: 12px;
+}
+
+.rmp-current {
+  border-right: 1px solid @background;
+}
+
+.rmp-loaded {
+  .box-shadow(none);
+}
+
+.rmp-handle,
+.rmp-desktop-volume-handle {
+  margin-top: -10px;
+  margin-left: -10px;
+  width: 20px;
+  height: 20px;
+  .transition(transform);
+}
+
+.rmp-handle:hover,
+.rmp-desktop-volume-handle:hover {
+  .transform-rotate(-90deg);
+}
+
+.rmp-indicator {
+  top: -40px;
+}
+
+.rmp-medium .rmp-time-elapsed,
+.rmp-medium .rmp-duration {
+  background: transparent !important;
+}
+
+.rmp-live .rmp-time-elapsed,
+.rmp-live-dvr .rmp-time-elapsed {
+  background: none !important;
+}

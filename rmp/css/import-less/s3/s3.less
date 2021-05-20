@@ -1,0 +1,524 @@
+/* Colors for s3 */
+@background: rgba(0, 0, 0, 0);
+@button: rgba(255, 255, 255, 1);
+@accent: rgba(247, 25, 16, 1);
+@accent-light: rgba(247, 25, 16, 0.7);
+@shadow: rgba(0, 0, 0, 0.5);
+
+/* s3 specific CSS */
+
+/* icons for central play */
+.rmp-overlay-button .rmp-i-play,
+.rmp-overlay-button .rmp-i-pause,
+.rmp-overlay-button .rmp-i-replay,
+.rmp-mobile-central-ui .rmp-i-play,
+.rmp-mobile-central-ui .rmp-i-pause,
+.rmp-mobile-central-ui .rmp-i-replay {
+  font-size: 56px;
+}
+
+/* adjust border for s3 skin */
+.rmp-module,
+.rmp-related-item,
+.rmp-time-elapsed,
+.rmp-duration,
+.rmp-time-total,
+.rmp-handle,
+.rmp-desktop-volume-handle,
+.rmp-indicator,
+.rmp-hint,
+.rmp-in-module-hint,
+.rmp-control-bar-hint,
+.rmp-overlay-level,
+.rmp-ad-info,
+.rmp-volume-bar,
+.rmp-module-fcc-settings,
+.rmp-desktop-volume-indicator,
+.rmp-desktop-volume-bar-container,
+.rmp-desktop-volume-hint,
+.rmp-ad-info-message,
+.rmp-quality-hd,
+.rmp-live-dvr .rmp-time-elapsed-text,
+.rmp-cue-point-text {
+  .border-radius(2px);
+}
+
+/* .rmp-time-elapsed */
+.rmp-time-elapsed {
+  height: 24px;
+  top: 8px;
+  line-height: 24px;
+  left: 22%;
+  width: 12%;
+  background: @shadow-2;
+}
+
+.rmp-small .rmp-time-elapsed {
+  left: 30%;
+  border: none;
+  bottom: auto;
+  width: 16%;
+}
+
+.rmp-extrasmall .rmp-time-elapsed {
+  left: 28%;
+  border: none;
+  bottom: auto;
+  width: 18%;
+}
+
+.rmp-live .rmp-time-elapsed,
+.rmp-live-dvr .rmp-time-elapsed {
+  background: none !important;
+}
+
+.rmp-quick-rewind-and-forward-ui .rmp-time-elapsed {
+  left: 40%;
+}
+
+.rmp-related-ui.rmp-small .rmp-time-elapsed,
+.rmp-related-ui.rmp-extrasmall .rmp-time-elapsed,
+.rmp-quick-rewind-or-forward-ui.rmp-small .rmp-time-elapsed,
+.rmp-quick-rewind-or-forward-ui.rmp-extrasmall .rmp-time-elapsed {
+  left: 42%;
+}
+
+.rmp-quick-rewind-and-forward-ui.rmp-small .rmp-time-elapsed {
+  left: 56%;
+}
+
+.rmp-mobile.rmp-small .rmp-time-elapsed {
+  left: 3%;
+  border: none;
+  bottom: auto;
+  width: 16%;
+}
+
+.rmp-mobile.rmp-extrasmall .rmp-time-elapsed {
+  left: 3%;
+  border: none;
+  bottom: auto;
+}
+
+.rmp-quick-rewind-and-forward-ui.rmp-extrasmall .rmp-time-elapsed {
+  left: 56%;
+}
+
+.rmp-related-ui.rmp-mobile.rmp-small .rmp-time-elapsed,
+.rmp-quick-rewind-or-forward-ui.rmp-mobile.rmp-small .rmp-time-elapsed {
+  left: 18%;
+}
+
+.rmp-quick-rewind-and-forward-ui.rmp-mobile.rmp-small .rmp-time-elapsed {
+  left: 36%;
+}
+
+.rmp-related-ui.rmp-mobile.rmp-extrasmall .rmp-time-elapsed,
+.rmp-quick-rewind-or-forward-ui.rmp-mobile.rmp-extrasmall .rmp-time-elapsed {
+  left: 20%;
+}
+
+.rmp-quick-rewind-and-forward-ui.rmp-mobile.rmp-extrasmall .rmp-time-elapsed {
+  left: 40%;
+}
+
+/* .rmp-duration */
+.rmp-duration {
+  height: 24px;
+  top: 8px;
+  line-height: 24px;
+  left: 36%;
+  width: 12%;
+  background: @shadow-2;
+}
+
+.rmp-small .rmp-duration,
+.rmp-extrasmall .rmp-duration {
+  left: 47%;
+  border: none;
+  background: @shadow-2;
+  bottom: auto;
+  width: 16%;
+}
+
+.rmp-extrasmall .rmp-duration {
+  width: 18%;
+}
+
+.rmp-mobile .rmp-duration {
+  left: 24%;
+}
+
+.rmp-related-ui .rmp-duration {
+  left: 44%;
+}
+
+.rmp-quick-rewind-or-forward-ui .rmp-duration {
+  left: 44%;
+}
+
+.rmp-related-ui.rmp-mobile .rmp-duration {
+  left: 34%;
+}
+
+.rmp-quick-rewind-and-forward-ui .rmp-duration {
+  left: 54%;
+}
+
+.rmp-quick-rewind-or-forward-ui.rmp-mobile .rmp-duration {
+  left: 34%;
+}
+
+.rmp-quick-rewind-and-forward-ui.rmp-mobile .rmp-duration {
+  left: 44%;
+}
+
+.rmp-quick-rewind-or-forward-ui.rmp-small .rmp-duration {
+  left: 59%;
+}
+
+.rmp-quick-rewind-and-forward-ui.rmp-small .rmp-duration,
+.rmp-quick-rewind-and-forward-ui.rmp-extrasmall .rmp-duration {
+  display: none;
+}
+
+.rmp-quick-rewind-and-forward-ui.rmp-small.rmp-mobile .rmp-duration,
+.rmp-quick-rewind-and-forward-ui.rmp-extrasmall.rmp-mobile .rmp-duration {
+  display: block;
+}
+
+.rmp-quick-rewind-or-forward-ui.rmp-extrasmall .rmp-duration {
+  left: 61%;
+}
+
+.rmp-related-ui.rmp-small .rmp-duration {
+  left: 59%;
+}
+
+.rmp-related-ui.rmp-extrasmall .rmp-duration {
+  left: 61%;
+}
+
+.rmp-mobile.rmp-small .rmp-duration {
+  left: 21%;
+  border: none;
+  background: @shadow-2;
+  bottom: auto;
+  width: 16%;
+}
+
+.rmp-mobile.rmp-extrasmall .rmp-duration {
+  left: 23%;
+  border: none;
+  background: @shadow-2;
+  bottom: auto;
+}
+
+.rmp-mobile.rmp-quick-rewind-or-forward-ui.rmp-small .rmp-duration {
+  left: 35%;
+}
+
+.rmp-mobile.rmp-quick-rewind-or-forward-ui.rmp-extrasmall .rmp-duration {
+  left: 39%;
+}
+
+.rmp-mobile.rmp-quick-rewind-and-forward-ui.rmp-small .rmp-duration {
+  left: 53%;
+}
+
+.rmp-mobile.rmp-quick-rewind-and-forward-ui.rmp-extrasmall .rmp-duration {
+  left: 59%;
+}
+
+.rmp-mobile.rmp-related-ui.rmp-small .rmp-duration {
+  left: 35%;
+}
+
+.rmp-mobile.rmp-related-ui.rmp-extrasmall .rmp-duration {
+  left: 38%;
+}
+
+/* .rmp-seek-bar */
+.rmp-seek-bar,
+.rmp-small .rmp-seek-bar,
+.rmp-extrasmall .rmp-seek-bar,
+.rmp-mobile .rmp-seek-bar,
+.rmp-related-ui .rmp-seek-bar,
+.rmp-quick-rewind-or-forward-ui .rmp-seek-bar,
+.rmp-quick-rewind-and-forward-ui .rmp-seek-bar,
+.rmp-mobile.rmp-small .rmp-seek-bar,
+.rmp-mobile.rmp-extrasmall .rmp-seek-bar,
+.rmp-mobile.rmp-related-ui .rmp-seek-bar,
+.rmp-mobile.rmp-quick-rewind-or-forward-ui .rmp-seek-bar,
+.rmp-related-ui.rmp-small .rmp-seek-bar,
+.rmp-related-ui.rmp-extrasmall .rmp-seek-bar,
+.rmp-quick-rewind-or-forward-ui.rmp-small .rmp-seek-bar,
+.rmp-quick-rewind-or-forward-ui.rmp-extrasmall .rmp-seek-bar,
+.rmp-quick-rewind-and-forward-ui.rmp-small .rmp-seek-bar,
+.rmp-quick-rewind-and-forward-ui.rmp-extrasmall .rmp-seek-bar,
+.rmp-mobile.rmp-quick-rewind-or-forward-ui.rmp-small .rmp-seek-bar,
+.rmp-mobile.rmp-quick-rewind-or-forward-ui.rmp-extrasmall .rmp-seek-bar,
+.rmp-mobile.rmp-quick-rewind-and-forward-ui.rmp-small .rmp-seek-bar,
+.rmp-mobile.rmp-quick-rewind-and-forward-ui.rmp-extrasmall .rmp-seek-bar,
+.rmp-related-ui.rmp-mobile.rmp-small .rmp-seek-bar,
+.rmp-related-ui.rmp-mobile.rmp-extrasmall .rmp-seek-bar {
+  left: 2%;
+  width: 96%;
+  top: -12px;
+  height: 10px;
+}
+
+.rmp-time-total {
+  height: 100%;
+  top: 0;
+  border: 1px solid @button;
+  background: @white-shadow-1;
+}
+
+.rmp-desktop-volume-handle,
+.rmp-handle {
+  width: 16px;
+  height: 16px;
+  margin-top: -8px;
+  margin-left: -8px;
+  .box-shadow(0 0 0 1px @shadow-6);
+}
+
+.rmp-current {
+  .border-radius(0);
+}
+
+.rmp-loaded {
+  opacity: 0.5;
+  background-color: @accent;
+  .border-radius(0);
+}
+
+.rmp-indicator {
+  background: @shadow-2;
+  top: -34px;
+}
+
+.rmp-seek-bar-thumbnails .rmp-indicator {
+  .border-radius-bottom-only(2px);
+}
+
+.rmp-seek-bar-thumbnails .rmp-thumbnails {
+  .border-radius-top-only(2px);
+}
+
+.rmp-small .rmp-play-pause .rmp-control-bar-hint,
+.rmp-extrasmall .rmp-play-pause .rmp-control-bar-hint,
+.rmp-small .rmp-quick-rewind-or-forward .rmp-control-bar-hint,
+.rmp-extrasmall .rmp-quick-rewind-or-forward .rmp-control-bar-hint {
+  top: -45px;
+}
+
+/* volume */
+.rmp-audio-only-volume-icon {
+  left: 81%;
+  padding-top: 2px;
+  top: -2px;
+  .border-radius-top-only(2px);
+}
+
+.rmp-volume.rmp-volume-off-mute {
+  background: @background;
+  color: @accent;
+}
+
+.rmp-volume-bar {
+  background: @shadow-2;
+}
+
+.rmp-desktop-volume-container {
+  bottom: 48px;
+}
+
+.rmp-desktop-volume-bar-container {
+  left: 16px;
+  width: 8px;
+  border: 1px solid @button;
+  background: @white-shadow-1;
+}
+
+.rmp-desktop-volume-indicator {
+  background: @shadow-2;
+  top: -36px;
+}
+
+.rmp-desktop-volume-hint {
+  background: @shadow-2;
+  top: -64px;
+}
+
+/* module */
+.rmp-module:hover {
+  background: @shadow-2;
+}
+
+.rmp-hint,
+.rmp-in-module-hint,
+.rmp-control-bar-hint {
+  background: @shadow-2;
+  border: none;
+}
+
+.rmp-control-bar-hint {
+  top: -45px;
+}
+
+.rmp-fullscreen .rmp-control-bar-hint {
+  right: 25%;
+}
+
+.rmp-play-pause .rmp-control-bar-hint {
+  left: 25%;
+}
+
+.rmp-overlay-level {
+  background: @shadow-2;
+  border-color: @button;
+}
+
+.rmp-overlay-level-active {
+  background: @button;
+  color: @accent;
+}
+
+.rmp-abr-active {
+  border-color: @accent;
+}
+
+.rmp-overlay-level-active.rmp-abr-active {
+  border-color: @button;
+}
+
+/* fullscreen */
+.rmp-fullscreen {
+  left: 90%;
+}
+
+/* play-pause */
+.rmp-related-ui .rmp-play-pause {
+  width: 10%;
+}
+
+.rmp-related-ui.rmp-small .rmp-play-pause {
+  width: 14%;
+}
+
+.rmp-related-ui.rmp-extrasmall .rmp-play-pause {
+  width: 14%;
+}
+
+.rmp-quick-rewind-and-forward-ui .rmp-quick-rewind-or-forward {
+  left: 20%;
+}
+
+.rmp-quick-rewind-and-forward-ui.rmp-mobile .rmp-quick-rewind-or-forward {
+  left: 10%;
+}
+
+.rmp-quick-rewind-and-forward-ui .rmp-quick-rewind-and-forward {
+  left: 30%;
+}
+
+.rmp-quick-rewind-and-forward-ui.rmp-mobile .rmp-quick-rewind-and-forward {
+  left: 20%;
+}
+
+/* 360 */
+.rmp-360-text {
+  text-shadow: 0 2px 1px @shadow-6;
+  margin-top: -66px;
+}
+
+.rmp-extrasmall .rmp-360-text {
+  margin-top: -50px;
+}
+
+/* logo */
+.rmp-logo-bottom-left,
+.rmp-logo-bottom-right,
+.rmp-small .rmp-logo-bottom-left,
+.rmp-small .rmp-logo-bottom-right,
+.rmp-extrasmall .rmp-logo-bottom-left,
+.rmp-extrasmall .rmp-logo-bottom-right {
+  bottom: 52px;
+}
+
+/* related */
+.rmp-related-skip-next {
+  left: 20%;
+  width: 10%;
+}
+
+.rmp-related-ui.rmp-extrasmall .rmp-related-skip-next {
+  width: 11%;
+  left: 28%;
+}
+
+.rmp-related-ui.rmp-mobile.rmp-small .rmp-related-skip-next,
+.rmp-related-ui.rmp-mobile.rmp-extrasmall .rmp-related-skip-next {
+  left: 3%;
+}
+
+.rmp-related-skip-preview {
+  top: -166px;
+}
+
+.rmp-small .rmp-related-skip-preview {
+  top: -150px;
+}
+
+.rmp-related-skip-preview-up-next {
+  background: @shadow-2;
+  .border-radius-top-only(2px);
+}
+
+.rmp-related-skip-preview-title {
+  background: @shadow-2;
+  .border-radius-bottom-only(2px);
+}
+
+/* Ads CSS */
+.rmp-ad-info {
+  background: @shadow-2;
+  height: 24px;
+  line-height: 24px;
+  top: 8px;
+  padding-right: 10px;
+}
+
+.rmp-ad-current-time {
+  bottom: 42px;
+}
+
+.rmp-ad-container.rmp-ad-overlay {
+  top: -50px;
+}
+
+.rmp-ad-info-message {
+  display: inline-block;
+  height: 100%;
+  padding: 0 6px;
+  .border-radius(0);
+}
+
+/* playlist */
+.rmp-playlist-header,
+.rmp-playlist-item {
+  color: @shadow-1;
+}
+
+/* Transcript */
+.rmp-transcripts-side-menu {
+  color: @black;
+}
+
+/* cue points */
+.rmp-cue-point-text {
+  background: @shadow-2;
+  top: -34px;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+	<title>DASH PlayReady DRM BBB (Azure)</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="robots" content="noindex">
+</head>
+
+<body>
+	<script src="js/tvjs.js"></script>
+	<script src="rmp/js/rmp.min.js"></script>
+	<div id="rmpPlayer"></div>
+	<script>
+		const src = {
+			dash: 'https://amssamples.streaming.mediaservices.windows.net/622b189f-ec39-43f2-93a2-201ac4e31ce1/BigBuckBunny.ism/manifest(format=mpd-time-csf)'
+		};
+		const settings = {
+			licenseKey: 'your-license-key',
+			src: src,
+			autoplay: true,
+			delayToFade: 5000,
+			pathToRmpFiles: 'rmp/',
+			contentMetadata: {
+				title: 'DASH PlayReady DRM BBB (Azure)'
+			},
+			shakaDrm: {
+				servers: {
+					'com.microsoft.playready': 'https://amssamples.keydelivery.mediaservices.windows.net/PlayReady/'
+				}
+			},
+			skin: 'tv'
+		};
+		window.elementID = 'rmpPlayer';
+		window.rmp = new RadiantMP(elementID);
+		rmp.init(settings);
+	</script>
+	<script src="js/player.js"></script>
+</body>
+
+</html>

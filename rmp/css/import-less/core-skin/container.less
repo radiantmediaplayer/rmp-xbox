@@ -1,0 +1,70 @@
+/* player container */
+.rmp-container {
+  position: relative;
+  text-align: center;
+  outline: none;
+  background-color: @black;
+  padding: 0;
+  border: none;
+  display: block;
+  font-size: 14px;
+  max-width: none;
+  max-height: none;
+  overflow: hidden;
+  line-height: normal;
+  .font-rmp();
+  .box-sizing();
+}
+
+.rmp-container * {
+  .box-sizing();
+}
+
+.rmp-container img {
+  border: none;
+}
+
+.rmp-container-fade-in {
+  .transition(~"opacity, visibility");
+}
+
+/* applies to the video tag and its wrapper */
+.rmp-video,
+.rmp-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  display: block;
+  outline: none;
+}
+
+/* right to left language (Hebrew) */
+.rmp-rtl {
+  direction: rtl;
+}
+
+/* debug overlay */
+.rmp-debug-overlay {
+  background: @shadow-1;
+  color: @white;
+  font-size: 12px;
+  overflow: auto;
+  z-index: 1001;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: left;
+}
+
+.rmp-debug-overlay-text {
+  margin-bottom: 5px;
+}

@@ -1,0 +1,69 @@
+/* when casting is engaged DVR streams are handled as simple live streams by Google Cast receiving app */
+.rmp-casting.rmp-live-dvr .rmp-time-total,
+.rmp-casting.rmp-live-dvr .rmp-duration {
+  display: none;
+}
+
+.rmp-live .rmp-time-elapsed {
+  width: auto;
+  overflow: visible;
+  padding: 0 8px;
+}
+
+.rmp-live-dvr .rmp-time-elapsed {
+  cursor: pointer;
+}
+
+.rmp-live.rmp-small .rmp-time-elapsed,
+.rmp-live.rmp-extrasmall .rmp-time-elapsed,
+.rmp-live.rmp-mobile .rmp-time-elapsed,
+.rmp-live.rmp-audio-only .rmp-time-elapsed,
+.rmp-live.rmp-mobile.rmp-small .rmp-time-elapsed,
+.rmp-live.rmp-mobile.rmp-extrasmall .rmp-time-elapsed,
+.rmp-live.rmp-audio-only.rmp-small .rmp-time-elapsed,
+.rmp-live.rmp-audio-only.rmp-extrasmall .rmp-time-elapsed {
+  width: auto;
+  overflow: visible;
+  padding: 0 16px 0 8px;
+}
+
+.rmp-live-dvr .rmp-time-elapsed-text {
+  background-color: @accent;
+  padding: 3px 6px;
+}
+
+.rmp-live .rmp-time-elapsed-text {
+  padding: 3px 6px;
+}
+
+.rmp-live .rmp-time-elapsed-text::before {
+  content: "\2022";
+  color: @accent;
+  margin-right: 2px;
+  font-size: 50px;
+  vertical-align: middle;
+}
+
+.rmp-dvr-vod .rmp-time-elapsed-text {
+  background-color: @accent-light;
+}
+
+.rmp-dvr-vod .rmp-time-elapsed-text:hover {
+  background-color: @accent;
+}
+
+.rmp-dvr-vod .rmp-i-dvr {
+  display: none;
+}
+
+.rmp-dvr-vod .rmp-duration-text {
+  display: block;
+}
+
+.rmp-dvr-live .rmp-i-dvr {
+  display: block;
+}
+
+.rmp-dvr-live .rmp-duration-text {
+  display: none;
+}

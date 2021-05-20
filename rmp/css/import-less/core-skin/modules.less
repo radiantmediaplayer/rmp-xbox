@@ -1,0 +1,426 @@
+/* ==========================================================================
+   General module layout - applies to all modules
+   Modules are: QUALITY, AUDIO, RELATED, SHARING, SPEED, CAPTIONS, CAST, AIRPLAY
+   CHAPTERS, VR, PiP, VOLUME (mobile only)
+   Modules with overlay are: QUALITY, AUDIO, RELATED, SHARING, SPEED,
+   CAPTIONS, CHAPTERS
+   ========================================================================== */
+
+.rmp-module {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  opacity: 1;
+  visibility: visible;
+  top: 8px;
+  right: 8px;
+  .transition(~"opacity, background, visibility");
+}
+
+.rmp-module ~ .rmp-module {
+  right: 56px;
+}
+
+.rmp-module ~ .rmp-module ~ .rmp-module {
+  right: 104px;
+}
+
+.rmp-module ~ .rmp-module ~ .rmp-module ~ .rmp-module {
+  right: 152px;
+}
+
+.rmp-module ~ .rmp-module ~ .rmp-module ~ .rmp-module ~ .rmp-module {
+  right: 200px;
+}
+
+.rmp-module
+  ~ .rmp-module
+  ~ .rmp-module
+  ~ .rmp-module
+  ~ .rmp-module
+  ~ .rmp-module {
+  right: 248px;
+}
+
+.rmp-module
+  ~ .rmp-module
+  ~ .rmp-module
+  ~ .rmp-module
+  ~ .rmp-module
+  ~ .rmp-module
+  ~ .rmp-module {
+  right: 296px;
+}
+
+.rmp-module
+  ~ .rmp-module
+  ~ .rmp-module
+  ~ .rmp-module
+  ~ .rmp-module
+  ~ .rmp-module
+  ~ .rmp-module
+  ~ .rmp-module {
+  right: 344px;
+}
+
+.rmp-module-button {
+  width: 40px;
+  height: 40px;
+}
+
+.rmp-module ~ .rmp-module .rmp-module-extended-menu,
+.rmp-module ~ .rmp-module ~ .rmp-module .rmp-module-extended-menu,
+.rmp-module ~ .rmp-module ~ .rmp-module ~ .rmp-module .rmp-module-extended-menu,
+.rmp-module
+  ~ .rmp-module
+  ~ .rmp-module
+  ~ .rmp-module
+  ~ .rmp-module
+  .rmp-module-extended-menu,
+.rmp-module
+  ~ .rmp-module
+  ~ .rmp-module
+  ~ .rmp-module
+  ~ .rmp-module
+  ~ .rmp-module
+  .rmp-module-extended-menu,
+.rmp-module
+  ~ .rmp-module
+  ~ .rmp-module
+  ~ .rmp-module
+  ~ .rmp-module
+  ~ .rmp-module
+  ~ .rmp-module
+  .rmp-module-extended-menu,
+.rmp-module
+  ~ .rmp-module
+  ~ .rmp-module
+  ~ .rmp-module
+  ~ .rmp-module
+  ~ .rmp-module
+  ~ .rmp-module
+  ~ .rmp-module
+  .rmp-module-extended-menu {
+  right: -46px;
+}
+
+.rmp-module-open-ui .rmp-title-area,
+.rmp-module-open-ui .rmp-logo,
+.rmp-module-open-ui .rmp-control-bar,
+.rmp-module-open-ui .rmp-loading-spin,
+.rmp-module-open-ui .rmp-mobile-central-ui,
+.rmp-module-open-ui .rmp-overlay-button,
+.rmp-module-open-ui .rmp-module,
+.rmp-module-open-ui .rmp-360-nav,
+.rmp-module-open-ui .rmp-360-text,
+.rmp-module-open-ui .rmp-playlist-left-arrow,
+.rmp-module-open-ui .rmp-playlist-right-arrow {
+  display: none !important;
+}
+
+.rmp-custom-module-icon {
+  width: 26px;
+  height: 26px;
+  background-repeat: no-repeat;
+  display: block;
+  position: absolute;
+  left: 7px;
+  top: 7px;
+  background-position: center;
+  background-size: 100%;
+  .transition(background-image);
+}
+
+.rmp-module-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: @shadow-2;
+  opacity: 0;
+  visibility: hidden;
+  .transition(~"opacity, visibility");
+}
+
+.rmp-module-overlay-icons {
+  cursor: pointer;
+  position: absolute;
+  top: 8px;
+  width: 40px;
+  height: 40px;
+  background: @background;
+}
+
+.rmp-module-overlay-close {
+  right: 8px;
+}
+
+.rmp-module-overlay-play-pause {
+  left: 8px;
+}
+
+.rmp-module-overlay label {
+  display: none;
+}
+
+.rmp-overlay-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.rmp-overlay-levels-area {
+  margin-bottom: 12px;
+}
+
+.rmp-overlay-level {
+  position: relative;
+  height: 30px;
+  line-height: 26px;
+  width: 172px;
+  padding: 0 4px;
+  left: 50%;
+  margin-left: -86px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  border: 2px solid @background;
+  cursor: pointer;
+  .font-rmp();
+  .transition(~"background, color, border-color");
+  .text-ellipsis();
+}
+
+.rmp-overlay-level-active {
+  border-color: @background;
+}
+
+.rmp-overlay-title {
+  position: relative;
+  height: 40px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  line-height: 40px;
+  overflow: hidden;
+}
+
+.rmp-overlay-title-text {
+  border-bottom: 2px solid @button;
+  padding-bottom: 2px;
+  font-size: 16px;
+}
+
+.rmp-sup {
+  vertical-align: top;
+  top: -4px;
+  position: relative;
+  font-size: 10px;
+  line-height: inherit;
+  color: @accent;
+}
+
+.rmp-quality-hd {
+  font-size: 8px;
+  position: absolute;
+  right: -4px;
+  height: 12px;
+  line-height: 12px;
+  background: @accent;
+  color: @button;
+  padding: 0 2px;
+  width: auto;
+  display: none;
+  text-shadow: none;
+  .font-rmp();
+  .box-shadow(0 0 2px @shadow-2);
+}
+
+/* hint for module */
+.rmp-hint,
+.rmp-in-module-hint {
+  display: inline-block;
+  font-family: "Roboto", Arial, sans-serif !important;
+  opacity: 0;
+  right: 0;
+  font-size: 14px;
+  position: absolute;
+  top: 44px;
+  padding: 0 8px;
+  height: 24px;
+  line-height: 24px;
+  white-space: nowrap;
+  color: @button;
+  .transition(opacity);
+}
+
+.rmp-in-module-hint {
+  right: auto;
+  left: 50%;
+  .transform-translateX();
+}
+
+.rmp-mobile .rmp-hint,
+.rmp-no-hint .rmp-hint,
+.rmp-mobile .rmp-in-module-hint,
+.rmp-no-hint .rmp-in-module-hint {
+  display: none !important;
+}
+
+.rmp-extrasmall .rmp-hint,
+.rmp-extrasmall .rmp-in-module-hint {
+  font-size: 12px;
+}
+
+.rmp-module-overlay-close .rmp-in-module-hint {
+  right: 0;
+  left: auto;
+  .transform();
+}
+
+.rmp-module-overlay-play-pause .rmp-in-module-hint {
+  right: auto;
+  left: 0;
+  .transform();
+}
+
+.rmp-module:hover .rmp-hint,
+.rmp-module-overlay-icons:hover .rmp-in-module-hint {
+  opacity: 1;
+}
+
+.rmp-abr-active {
+  border-color: @accent;
+}
+
+.rmp-overlay-level-active.rmp-abr-active {
+  border-color: @background;
+}
+
+/* sharing module layout */
+.rmp-sharing-social {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.rmp-sharing-social-icons {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.rmp-sharing-link {
+  position: relative;
+  height: 30px;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.rmp-sharing-input {
+  position: absolute;
+  left: 16%;
+  width: 68%;
+  height: 26px;
+  line-height: 26px;
+  vertical-align: top;
+  color: @black;
+  padding: 0 6px;
+  background: @white;
+  border: none;
+  .border-radius();
+  .box-shadow(inset 0 0 4px @shadow-2);
+}
+
+.rmp-sharing-code {
+  position: relative;
+  height: 30px;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.rmp-i-link,
+.rmp-i-code {
+  position: absolute;
+  left: 8%;
+}
+
+.rmp-i-copy {
+  width: 22px;
+  position: absolute;
+  right: 8%;
+  cursor: pointer;
+}
+
+/**
+ * chaptering module
+ */
+.rmp-chapters-text {
+  width: 320px;
+  margin-left: -160px;
+}
+
+.rmp-extrasmall .rmp-chapters-text {
+  width: 208px;
+  margin-left: -104px;
+  font-size: 12px;
+}
+
+/**
+ * PiP module
+ */
+.rmp-pip-on .rmp-i-pip {
+  color: @accent;
+}
+
+/**
+ * This section applies to FCC settings in the CC menu
+ */
+.rmp-module-fcc-settings {
+  left: 50%;
+  margin-left: -86px;
+  height: 30px;
+  line-height: 26px;
+  width: 172px;
+  position: relative;
+  border: 2px solid @button;
+  background: none;
+  .transition(~"color, border-color");
+}
+
+.rmp-module-fcc-settings:hover {
+  border-color: @accent;
+  color: @accent;
+}
+
+.rmp-module-fcc-settings-default {
+  margin-top: 20px;
+  margin-bottom: 22px;
+}
+
+.rmp-overlay-fcc-settings-area .rmp-select {
+  position: relative;
+  display: block;
+  text-align: center;
+  text-transform: capitalize;
+  left: 50%;
+  padding: 2px;
+  color: @grey;
+  border: 1px solid @grey;
+  .border-radius(4px);
+  .transform-translate(-50%, 0);
+}
+
+.rmp-overlay-fcc-settings-area .rmp-option {
+  text-transform: capitalize;
+}
+
+.rmp-module-overlay .rmp-overlay-fcc-settings-area label {
+  position: relative;
+  display: block;
+  text-align: center;
+  margin: 12px 0 6px 0;
+}

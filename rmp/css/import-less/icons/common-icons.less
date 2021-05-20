@@ -1,0 +1,194 @@
+// applies to each icon
+.rmp-i {
+  font-family: "rmp-font" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-shadow: 0 2px 1px @shadow-6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  .transition(color);
+}
+
+// the following icons are used for all skins
+// CC icon
+.rmp-i-captions::before {
+  content: "\e01c";
+}
+
+// sharing overlay icons
+.rmp-i-facebook::before {
+  content: "\f082";
+}
+
+.rmp-i-twitter::before {
+  content: "\f081";
+}
+
+.rmp-i-linkedin::before {
+  content: "\f08c";
+}
+
+.rmp-i-reddit::before {
+  content: "\f1a2";
+}
+
+.rmp-i-email::before {
+  content: "\f0e0";
+}
+
+.rmp-i-code::before {
+  content: "\e86f";
+}
+
+.rmp-i-link::before {
+  content: "\e157";
+}
+
+.rmp-i-copy::before {
+  content: "\e14d";
+}
+
+// 360 nav icons
+.rmp-i-left::before {
+  content: "\f137";
+}
+
+.rmp-i-right::before {
+  content: "\f138";
+}
+
+.rmp-i-up::before {
+  content: "\f139";
+}
+
+.rmp-i-down::before {
+  content: "\f13a";
+}
+
+.rmp-i-plus-360::before {
+  content: "\f055";
+}
+
+.rmp-i-minus-360::before {
+  content: "\f056";
+}
+
+.rmp-i-reset-360::before {
+  content: "\f192";
+}
+
+// VR nav icon
+.rmp-i-vr::before {
+  content: "\e92a";
+}
+
+// DVR icon
+.rmp-i-dvr::before {
+  content: "\e91b";
+}
+
+// quick rewind icons
+.rmp-i-quick-rewind-5::before {
+  content: "\e05b";
+}
+
+.rmp-i-quick-rewind-10::before {
+  content: "\e059";
+}
+
+.rmp-i-quick-rewind-30::before {
+  content: "\e05a";
+}
+
+.rmp-i-quick-rewind-tv::before {
+  content: "\e92c";
+}
+
+.rmp-i-quick-forward-5::before {
+  content: "\e058";
+}
+
+.rmp-i-quick-forward-10::before {
+  content: "\e30b";
+}
+
+.rmp-i-quick-forward-30::before {
+  content: "\e057";
+}
+
+.rmp-i-quick-forward-tv::before {
+  content: "\e92b";
+}
+
+// airplay icon
+.rmp-i-airplay::before {
+  content: "\e055";
+}
+
+.rmp-i-airplay-connected {
+  color: @blue;
+}
+
+// Google Cast (Cordova) icon
+.rmp-i-google-cast::before {
+  content: "\e307";
+}
+
+.rmp-i-google-cast-connected::before {
+  content: "\e308";
+  color: @blue;
+}
+// PiP
+.rmp-i-pip::before {
+  content: "\e926";
+}
+
+// error
+.rmp-i-exclamation::before {
+  content: "\f071";
+}
+
+.grabbing {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+
+/* icons in the control bar */
+.rmp-control-bar .rmp-i {
+  font-size: 22px;
+}
+
+/* icons when a module is open */
+.rmp-module-overlay .rmp-i {
+  font-size: 26px;
+}
+
+/* playlist navigation icons */
+.rmp-playlist-left-arrow,
+.rmp-playlist-right-arrow {
+  font-size: 34px;
+}
+
+/* module icons */
+.rmp-module .rmp-i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 26px;
+  .transform-translate();
+}
+
+/* social icons when sharing module is open */
+.rmp-module-overlay .rmp-sharing-social .rmp-i {
+  font-size: 30px;
+}
+
+.rmp-module-overlay .rmp-sharing-link .rmp-i,
+.rmp-module-overlay .rmp-sharing-code .rmp-i {
+  font-size: 22px;
+}
+

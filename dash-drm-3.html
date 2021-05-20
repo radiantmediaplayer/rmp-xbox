@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+	<title>DASH PlayReady DRM Tears of Steel (Microsoft)</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="robots" content="noindex">
+</head>
+
+<body>
+	<script src="js/tvjs.js"></script>
+	<script src="rmp/js/rmp.min.js"></script>
+	<div id="rmpPlayer"></div>
+	<script>
+		const src = {
+			dash: 'https://demo.unified-streaming.com/video/tears-of-steel/tears-of-steel-dash-playready.ism/.mpd'
+		};
+		const settings = {
+			licenseKey: 'your-license-key',
+			src: src,
+			autoplay: true,
+			delayToFade: 5000,
+			pathToRmpFiles: 'rmp/',
+			contentMetadata: {
+				title: 'DASH PlayReady DRM Tears of Steel (Microsoft)'
+			},
+			shakaDrm: {
+				servers: {
+					'com.microsoft.playready': 'https://test.playready.microsoft.com/service/rightsmanager.asmx?PlayRight=1&UseSimpleNonPersistentLicense=1'
+				}
+			},
+			skin: 'tv'
+		};
+		window.elementID = 'rmpPlayer';
+		window.rmp = new RadiantMP(elementID);
+		rmp.init(settings);
+	</script>
+	<script src="js/player.js"></script>
+</body>
+
+</html>

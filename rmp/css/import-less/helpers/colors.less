@@ -1,0 +1,52 @@
+/* default color settings */
+@black: rgba(0, 0, 0, 1);
+@shadow-1: rgba(0, 0, 0, 0.8);
+@shadow-2: rgba(0, 0, 0, 0.6);
+@shadow-3: rgba(0, 0, 0, 0.5);
+@shadow-4: rgba(0, 0, 0, 0.4);
+@shadow-5: rgba(0, 0, 0, 0.3);
+@shadow-6: rgba(0, 0, 0, 0.2);
+@shadow-7: rgba(0, 0, 0, 0.1);
+@invisble: rgba(0, 0, 0, 0);
+@white: rgba(255, 255, 255, 1);
+@white-shadow-1: rgba(255, 255, 255, 0.4);
+@white-shadow-2: rgba(255, 255, 255, 0.2);
+@light-grey: #cfcfcf;
+@grey: #333;
+
+/* chromecast button colors as per Google recommendations
+ * this is also used for UI focus on keyboard controls */
+@blue: rgba(33, 150, 243, 1);
+@blueHover: rgba(33, 150, 243, 0.85);
+
+/* closed captions */
+@ccBackground: rgba(0, 0, 0, 0.8);
+@ccFontColor: rgba(255, 255, 255, 1);
+
+/* applying colors to player - general colors */
+.rmp-color-bg {
+  background: @background;
+}
+
+.rmp-color-button {
+  color: @button;
+}
+
+.rmp-color-bg-button,
+.rmp-circle::before {
+  background: @button;
+}
+
+.rmp-overlay-level-active {
+  background: @button;
+  color: @background;
+}
+
+.rmp-i:hover,
+.rmp-module:hover .rmp-i {
+  color: @accent;
+}
+
+.rmp-overlay-level:hover:not(.rmp-overlay-level-active) {
+  color: @accent;
+}

@@ -1,0 +1,115 @@
+// Volume Modume
+.rmp-volume.rmp-volume-off-mute {
+  background: @button;
+  color: @background;
+}
+
+.rmp-volume.rmp-volume-off-mute .rmp-hint {
+  color: @button;
+}
+
+// desktop UI
+.rmp-desktop-volume-icon {
+  position: absolute;
+  left: 10%;
+  width: 10%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.rmp-small .rmp-desktop-volume-icon,
+.rmp-extrasmall .rmp-desktop-volume-icon {
+  left: 14%;
+  width: 14%;
+}
+
+.rmp-desktop-volume-container {
+  position: absolute;
+  width: 40px;
+  left: 50%;
+  margin-left: -20px;
+  bottom: 40px;
+  height: 124px;
+  opacity: 0;
+  .transition(all);
+}
+
+.rmp-desktop-volume-icon:hover .rmp-desktop-volume-container {
+  opacity: 1;
+  .transition(opacity);
+}
+
+.rmp-desktop-volume-container:focus {
+  outline: none;
+}
+
+.rmp-desktop-volume-handle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-top: -12px;
+  margin-left: -12px;
+  width: 24px;
+  height: 24px;
+  .box-shadow(0 0 2px 1px @shadow-5);
+}
+
+.rmp-360-ui .rmp-desktop-volume-container,
+.rmp-small .rmp-desktop-volume-container,
+.rmp-extrasmall .rmp-desktop-volume-container {
+  z-index: 1;
+}
+
+.rmp-desktop-volume-bar-container {
+  position: absolute;
+  left: 12px;
+  bottom: 15px;
+  top: auto;
+  width: 16px;
+  height: 92px;
+  background: @white-shadow-2;
+}
+
+.rmp-desktop-volume-bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: @button;
+}
+
+.rmp-desktop-volume-indicator {
+  position: absolute;
+  left: 0;
+  top: -44px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+  background: @background;
+  color: @button;
+  .font-rmp();
+  .unselectable();
+}
+
+.rmp-desktop-volume-hint {
+  position: absolute;
+  top: -72px;
+  padding: 0 8px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 14px;
+  background: @background;
+  color: @button;
+  white-space: nowrap;
+  width: auto;
+  .font-rmp();
+  .unselectable();
+}
+
+.rmp-small .rmp-desktop-volume-hint,
+.rmp-extrasmall .rmp-desktop-volume-hint,
+.rmp-extrasmall .rmp-desktop-volume-indicator {
+  display: none;
+}

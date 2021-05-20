@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+	<title>DASH with video ads (rmp-vast)</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="robots" content="noindex">
+</head>
+
+<body>
+	<script src="js/tvjs.js"></script>
+	<script src="rmp/js/rmp.min.js"></script>
+	<div id="rmpPlayer"></div>
+	<script>
+		const src = {
+			dash: 'https://5b44cf20b0388.streamlock.net:8443/vod/smil:bbb.smil/manifest.mpd'
+		};
+		const settings = {
+			licenseKey: 'your-license-key',
+			src: src,
+			delayToFade: 5000,
+			contentMetadata: {
+				title: 'DASH with video ads (rmp-vast)',
+			},
+			autoplay: true,
+			pathToRmpFiles: 'rmp/',
+			ads: true,
+			adParser: 'rmp-vast',
+			adTagUrl: 'https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dlinear&correlator=' + Date.now(),
+			skin: 'tv'
+		};
+		window.elementID = 'rmpPlayer';
+		window.rmp = new RadiantMP(elementID);
+		rmp.init(settings);
+	</script>
+	<script src="js/player.js"></script>
+</body>
+
+</html>

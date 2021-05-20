@@ -1,0 +1,63 @@
+/* Content title and description */
+.rmp-title-area,
+.rmp-cast-diplay-message-area {
+  position: absolute;
+  opacity: 1;
+  visibility: visible;
+  padding: 0 8px;
+  cursor: default;
+  left: 0;
+  top: 0;
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+  background: linear-gradient(
+    @shadow-4,
+    @shadow-5,
+    @shadow-6,
+    @shadow-7,
+    @invisble
+  );
+  height: 56px;
+  line-height: 56px;
+  color: @white;
+  .transition(~"opacity, visibility");
+}
+
+.rmp-cast-diplay-message-area {
+  display: none;
+}
+
+.rmp-title {
+  .text-ellipsis();
+}
+
+.rmp-description,
+.rmp-cast-diplay-message-status {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  padding: 0 8px;
+  width: 100%;
+  font-size: 12px;
+  .text-ellipsis();
+}
+
+.rmp-title-ui.rmp-title-description-ui .rmp-title-area,
+.rmp-casting .rmp-cast-diplay-message-area {
+  height: 92px;
+  line-height: 46px;
+}
+
+.rmp-360-ui .rmp-title-area {
+  text-align: center;
+}
+
+.rmp-tv-player .rmp-title-area {
+  padding: 0 3%;
+}
+
+.rmp-tv-player .rmp-description {
+  left: 3%;
+  padding: 0 8px 0 0;
+}

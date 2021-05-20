@@ -1,0 +1,122 @@
+.rmp-transcripts-container {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  .font-rmp();
+  .box-sizing();
+}
+
+.rmp-transcripts-container * {
+  .box-sizing();
+}
+
+.rmp-transcripts-player-wrapper {
+  float: none;
+}
+
+/* transcripts side menu */
+.rmp-transcripts-side-menu {
+  overflow: auto;
+  overflow-x: hidden;
+  position: relative;
+  float: none;
+  height: auto;
+  max-height: 480px;
+  width: 100%;
+}
+
+/* transcripts side menu header */
+.rmp-transcripts-header {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  height: 32px;
+  line-height: 32px;
+  font-size: 16px;
+  border-bottom: 1px solid @button;
+}
+
+.rmp-transcripts-body {
+  padding: 5px 10px;
+  text-align: left;
+}
+
+/* transcripts side menu item */
+.rmp-transcripts-item {
+  height: 64px;
+  position: relative;
+  cursor: pointer;
+  background: transparent;
+  font-size: 14px;
+  padding: 2px;
+  .transition(~"color, background");
+}
+
+.rmp-transcripts-item:hover {
+  color: @accent;
+}
+
+.rmp-transcripts-current-item {
+  background: @accent;
+}
+
+.rmp-transcripts-current-item:hover {
+  color: @button;
+}
+
+@media (min-width: 768px) {
+  .rmp-transcripts-container {
+    width: 740px;
+    height: 270px;
+  }
+
+  .rmp-transcripts-player-wrapper {
+    width: 480px;
+    height: 270px;
+    float: left;
+  }
+
+  .rmp-transcripts-side-menu {
+    float: left;
+    width: 260px;
+    height: 270px;
+  }
+}
+
+@media (min-width: 992px) {
+  .rmp-transcripts-container {
+    width: 980px;
+    height: 360px;
+  }
+
+  .rmp-transcripts-player-wrapper {
+    width: 640px;
+    height: 360px;
+    float: left;
+  }
+
+  .rmp-transcripts-side-menu {
+    float: left;
+    width: 340px;
+    height: 360px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .rmp-transcripts-container {
+    width: 1180px;
+    height: 468px;
+  }
+
+  .rmp-transcripts-player-wrapper {
+    width: 832px;
+    height: 468px;
+    float: left;
+  }
+
+  .rmp-transcripts-side-menu {
+    float: left;
+    width: 348px;
+    height: 468px;
+  }
+}

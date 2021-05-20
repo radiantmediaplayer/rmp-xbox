@@ -1,0 +1,267 @@
+/* ad container where ads are rendered */
+.rmp-ad-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  display: block;
+  text-align: initial;
+}
+
+/* non-linear (overlay ads) bottom offset
+   this is not applied in case non-linear ad is taking the full height of the player */
+.rmp-ad-overlay {
+  top: -40px;
+}
+
+.rmp-ad-no-auto-align {
+  top: 0;
+}
+
+/* preroll mask */
+.rmp-ad-preroll-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  visibility: visible;
+  background-color: @black;
+  .transition(~"opacity, visibility");
+}
+
+/* ad information within control bar */
+.rmp-ad-info {
+  position: absolute;
+  left: 20%;
+  height: 100%;
+  line-height: 40px;
+  text-align: initial;
+  white-space: nowrap;
+  max-width: 50%;
+  .text-ellipsis();
+  .unselectable();
+}
+
+.rmp-small .rmp-ad-info,
+.rmp-extrasmall .rmp-ad-info {
+  left: 28%;
+}
+
+.rmp-extrasmall .rmp-ad-info {
+  font-size: 12px;
+}
+
+.rmp-mobile .rmp-ad-info {
+  left: 10%;
+}
+
+.rmp-mobile.rmp-small .rmp-ad-info,
+.rmp-mobile.rmp-extrasmall .rmp-ad-info {
+  left: 3%;
+}
+
+.rmp-ad-info-message {
+  background-color: @accent;
+  padding: 3px 6px;
+}
+
+.rmp-ad-info-pod,
+.rmp-ad-info-countdown {
+  margin-left: 10px;
+}
+
+/* remaining time bar for ads */
+.rmp-ad-current-time {
+  position: absolute;
+  bottom: 40px;
+  height: 3px;
+  background: @accent;
+  .transition(width, 0.4s, linear);
+}
+
+/* skip button */
+.rmp-ad-skip {
+  position: absolute;
+  right: 0;
+  bottom: 44px;
+  width: 138px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  background-color: @grey;
+  border: 1px solid @grey;
+  .transition(border-color);
+}
+
+.rmp-ad-skip:hover {
+  border-color: @black;
+}
+
+.rmp-extrasmall .rmp-ad-skip,
+.rmp-extrasmall .rmp-ad-container-skip {
+  width: 104px;
+  height: 32px;
+  line-height: 30px;
+  font-size: 12px;
+}
+
+.rmp-ad-skip-waiting {
+  width: 100%;
+  position: absolute;
+  padding: 0 4px;
+  color: @light-grey;
+  top: 0;
+  .text-ellipsis();
+}
+
+.rmp-ad-skip-message {
+  width: 65%;
+  position: absolute;
+  left: 5%;
+  top: 0;
+  color: @white;
+  .text-ellipsis();
+}
+
+.rmp-ad-skip-icon {
+  position: absolute;
+  top: 0;
+  left: 75%;
+  width: 20%;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQJJREFUeNpi/P//PwMUNADxXyBuZsAPcoA4CIjfA/EuIJ4JFgUZBMU3/kNAMZIYNnz8PwIcgokzIdl0A0r3AHEbHhf9RGJ/hjGQDWJFYlcC8SQgZibgzf/YDEIHuUC8CIi58ahhJMYgEIgC4mVALIFNMzIgZBAI+AHxRiCWRfcOqQaBgBkQrwRiMSB+iE0BCwPxwBKIDwLxH0pcBAMPkKOcXIPmALEnED+lxKDJQJwKZUuQa1AVEOch8f+SE9hZQDydGCcjG/QPif0H6pUF+LIFriwCy1dvgTgChyEMaPmPBZuLVKA2RALxbjy+IGjQCiD+RcAQEFgF9fpHIN4GEwQIMACnXWgupdnzwwAAAABJRU5ErkJggg==");
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.75;
+  .transition(opacity);
+}
+
+.rmp-ad-skip:hover .rmp-ad-skip-icon {
+  opacity: 1;
+}
+
+/* rmp-vast - adjust learn more button at lower size */
+.rmp-small .rmp-ad-click-ui-mobile,
+.rmp-extrasmall .rmp-ad-click-ui-mobile {
+  right: 6px;
+  top: 6px;
+  font-size: 16px;
+  width: 98px;
+  height: 30px;
+  line-height: 26px;
+}
+
+/* ad blocker detected */
+.rmp-ad-block-container {
+  position: absolute;
+  background: @shadow-4;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  .transition(~"opacity, visibility", 0.8s);
+}
+
+.rmp-ad-block-text {
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  top: 50%;
+  height: auto;
+  color: @white;
+  font-size: 16px;
+  text-align: center;
+  background: @black;
+  padding: 12px;
+  border: 1px solid @white;
+  .box-shadow(0 3px 8px @shadow-4);
+  .transform-translateY();
+}
+
+.rmp-audio-only .rmp-ad-block-text {
+  left: 0;
+  width: 100%;
+  height: 40px;
+  top: 0;
+  font-size: 14px;
+  border: none;
+  padding: 4px;
+  line-height: 32px;
+  .box-shadow(none);
+  .transform(none);
+}
+
+.rmp-ad-block-detected .rmp-poster {
+  .filter-blur();
+}
+
+.rmp-ad-block-detected .rmp-control-bar,
+.rmp-ad-block-detected .rmp-module,
+.rmp-ad-block-detected .rmp-logo,
+.rmp-ad-block-detected .rmp-title-area,
+.rmp-ad-block-detected .rmp-overlay-button,
+.rmp-ad-block-detected .rmp-mobile-central-ui,
+.rmp-ad-block-detected .rmp-loading-spin {
+  display: none !important;
+}
+
+/* IMA DAI */
+.rmp-ima-dai-click-area {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+/* ad scheduler */
+.rmp-ad-markers {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background: @accent;
+  width: 4px;
+}
+
+.rmp-linear-ad-ui .rmp-title-area,
+/* hide control bar hint for fullscreen to prevent overlapping with skip button */
+.rmp-linear-ad-ui .rmp-fullscreen .rmp-control-bar-hint,
+.rmp-linear-ad-ui .rmp-module {
+  display: none !important;
+}
+
+/* volume for ads on mobile (IMA or rmp-vast) */
+.rmp-mobile.rmp-linear-ad-ui .rmp-module.rmp-volume {
+  left: 8px;
+  display: block !important;
+}
+
+/* VPAID with no controls or full-slot ad sense === no UI while ad is on stage */
+.rmp-ad-no-ui .rmp-control-bar,
+.rmp-ad-no-ui .rmp-module,
+.rmp-ad-no-ui .rmp-loading-spin,
+.rmp-ad-no-ui .rmp-mobile-central-ui,
+.rmp-ad-no-ui .rmp-overlay-button {
+  display: none !important;
+}
+
+/* VPAID with adVpaidControls: true - force display of controls */
+.rmp-ad-vpaid-force-controls .rmp-control-bar,
+.rmp-ad-vpaid-force-controls .rmp-volume {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}

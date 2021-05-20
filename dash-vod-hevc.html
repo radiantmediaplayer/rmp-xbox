@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+	<title>DASH VOD HEVC</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="robots" content="noindex">
+</head>
+
+<body>
+	<script src="js/tvjs.js"></script>
+	<script src="rmp/js/rmp.min.js"></script>
+	<div id="rmpPlayer"></div>
+	<script>
+		const src = {
+			dash: 'https://dash.akamaized.net/dash264/TestCasesHEVC/1a/9/tos_ondemand_multirate_hvc.mpd'
+		};
+		const settings = {
+			licenseKey: 'your-license-key',
+			src: src,
+			autoplay: true,
+			pathToRmpFiles: 'rmp/',
+			delayToFade: 5000,
+			contentMetadata: {
+				title: 'DASH VOD HEVC',
+			},
+			skin: 'tv'
+		};
+		window.elementID = 'rmpPlayer';
+		window.rmp = new RadiantMP(elementID);
+		rmp.init(settings);
+	</script>
+	<script src="js/player.js"></script>
+</body>
+
+</html>

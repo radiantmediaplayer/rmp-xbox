@@ -1,0 +1,28 @@
+.rmp-audio-only .rmp-loading-spin-bounce,
+.rmp-audio-only .rmp-loading-spin-circle {
+  height: 26px;
+  width: 26px;
+  left: 7px;
+  top: 7px;
+}
+
+.rmp-audio-only .rmp-loading-spin {
+  top: 0;
+  left: 12%;
+  height: 40px;
+  margin-top: 0;
+  width: 40px;
+  margin-left: 0;
+  background: transparent !important;
+}
+
+.rmp-audio-only .rmp-time-elapsed {
+  opacity: 1;
+  visibility: visible;
+  .transition(~"opacity, visibility");
+}
+
+.rmp-audio-only.rmp-waiting .rmp-time-elapsed {
+  opacity: 0;
+  visibility: hidden;
+}

@@ -1,0 +1,304 @@
+/* player chrome bar (a.k.a. player controls) and inner elements */
+.rmp-control-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  overflow: visible;
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  text-shadow: none;
+  .transition(~"opacity, visibility");
+}
+
+.rmp-control-bar-hint {
+  font-family: "Roboto", Arial, sans-serif !important;
+  font-size: 14px;
+  opacity: 0;
+  position: absolute;
+  top: -28px;
+  padding: 0 8px;
+  height: 24px;
+  line-height: 24px;
+  white-space: nowrap;
+  color: @button;
+  .transition(opacity);
+  .unselectable();
+}
+
+.rmp-extrasmall .rmp-control-bar-hint {
+  font-size: 12px;
+}
+
+.rmp-play-pause .rmp-control-bar-hint,
+.rmp-fullscreen .rmp-control-bar-hint,
+.rmp-quick-rewind-or-forward .rmp-control-bar-hint {
+  left: 50%;
+}
+
+.rmp-mobile .rmp-control-bar-hint,
+.rmp-no-hint .rmp-control-bar-hint {
+  display: none !important;
+}
+
+.rmp-small .rmp-play-pause .rmp-control-bar-hint,
+.rmp-extrasmall .rmp-play-pause .rmp-control-bar-hint,
+.rmp-small .rmp-quick-rewind-or-forward .rmp-control-bar-hint,
+.rmp-extrasmall .rmp-quick-rewind-or-forward .rmp-control-bar-hint {
+  top: -56px;
+}
+
+.rmp-play-pause:hover .rmp-control-bar-hint,
+.rmp-fullscreen:hover .rmp-control-bar-hint,
+.rmp-quick-rewind-or-forward:hover .rmp-control-bar-hint {
+  opacity: 1;
+}
+
+/* before metadata are present we hide control bar */
+.rmp-wait-for-metadata .rmp-control-bar {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+/* play/pause button */
+.rmp-play-pause {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10%;
+  height: 100%;
+}
+
+.rmp-small .rmp-play-pause,
+.rmp-extrasmall .rmp-play-pause {
+  left: 0;
+  width: 14%;
+}
+
+.rmp-small.rmp-mobile .rmp-play-pause,
+.rmp-extrasmall.rmp-mobile .rmp-play-pause {
+  display: none;
+}
+
+/* current time in video */
+.rmp-time-elapsed {
+  position: absolute;
+  left: 20%;
+  width: 10%;
+  height: 100%;
+  line-height: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+  .text-ellipsis();
+}
+
+.rmp-small .rmp-time-elapsed,
+.rmp-extrasmall .rmp-time-elapsed {
+  left: 0;
+  bottom: 44px;
+  width: 18%;
+  height: 24px;
+  line-height: 24px;
+}
+
+.rmp-extrasmall .rmp-time-elapsed {
+  font-size: 12px;
+}
+
+.rmp-mobile .rmp-time-elapsed {
+  left: 10%;
+}
+
+.rmp-small.rmp-mobile .rmp-time-elapsed,
+.rmp-extrasmall.rmp-mobile .rmp-time-elapsed {
+  left: 0;
+}
+
+.rmp-time-elapsed-text,
+.rmp-duration-text {
+  position: relative;
+  top: 0;
+  left: 0;
+  color: @button;
+  .font-rmp();
+  .transition(~"background-color, color");
+}
+
+/* player seek bar / timeline */
+.rmp-seek-bar {
+  position: absolute;
+  left: 32%;
+  width: 46%;
+  height: 100%;
+}
+
+/* element with slider role will have focus on click
+ so we remove the user agent stylesheet for :focus */
+.rmp-seek-bar:focus {
+  outline: none;
+}
+
+.rmp-small .rmp-seek-bar,
+.rmp-extrasmall .rmp-seek-bar {
+  left: 30%;
+  width: 54%;
+}
+
+.rmp-mobile .rmp-seek-bar {
+  left: 22%;
+  width: 56%;
+  touch-action: none;
+}
+
+.rmp-small.rmp-mobile .rmp-seek-bar,
+.rmp-extrasmall.rmp-mobile .rmp-seek-bar {
+  left: 4%;
+  width: 78%;
+}
+
+.rmp-time-total {
+  position: relative;
+  left: 1%;
+  width: 98%;
+  background: @white-shadow-2;
+  cursor: pointer;
+  .box-shadow(inset 0 0 2px 0 @shadow-2);
+}
+
+.rmp-current {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+}
+
+.rmp-handle {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -12px;
+  margin-left: -12px;
+  width: 24px;
+  height: 24px;
+  z-index: 1;
+  .box-shadow(0 0 2px 1px @shadow-5);
+}
+
+.rmp-loaded {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: @white-shadow-2;
+  .box-shadow(inset 0 0 2px 0 @shadow-2);
+}
+
+/* video duration */
+.rmp-duration {
+  position: absolute;
+  left: 80%;
+  width: 10%;
+  height: 100%;
+  line-height: 40px;
+  .text-ellipsis();
+}
+
+.rmp-small .rmp-duration,
+.rmp-extrasmall .rmp-duration {
+  left: auto;
+  right: 0;
+  bottom: 44px;
+  height: 24px;
+  line-height: 24px;
+  width: 18%;
+  margin-left: 4px;
+}
+
+.rmp-extrasmall .rmp-duration {
+  font-size: 12px;
+}
+
+/* fullscreen management */
+.rmp-fullscreen {
+  position: absolute;
+  top: 0;
+  left: 90%;
+  width: 10%;
+  height: 100%;
+}
+
+.rmp-small .rmp-fullscreen,
+.rmp-extrasmall .rmp-fullscreen {
+  left: 86%;
+  width: 14%;
+}
+
+/* time indicator (hover seek bar) */
+.rmp-indicator {
+  position: absolute;
+  top: -40px;
+  opacity: 0;
+  visibility: hidden;
+  width: 70px;
+  margin-left: -35px;
+  text-align: center;
+  height: 24px;
+  line-height: 24px;
+  z-index: 999;
+  .transition(~"opacity, visibility");
+  .unselectable();
+}
+
+.rmp-extrasmall .rmp-indicator {
+  font-size: 12px;
+}
+
+/* Seek bar thumbnails */
+.rmp-thumbnails {
+  width: 128px;
+  position: absolute;
+  left: 0;
+}
+
+.rmp-seek-bar-thumbnails .rmp-indicator {
+  position: absolute;
+  width: 128px;
+  margin-left: -64px;
+}
+
+.rmp-extrasmall .rmp-seek-bar-thumbnails .rmp-indicator {
+  width: 70px;
+  margin-left: -35px;
+}
+
+/* cue points */
+.rmp-cue-point {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background: @accent;
+  width: 4px;
+}
+
+.rmp-cue-point-text {
+  position: absolute;
+  top: -40px;
+  opacity: 0;
+  visibility: hidden;
+  width: auto;
+  margin-left: auto;
+  text-align: center;
+  height: 24px;
+  line-height: 24px;
+  z-index: 1000;
+  padding: 0 8px;
+  white-space: nowrap;
+  .transform-translateX();
+  .transition(~"opacity, visibility");
+  .unselectable();
+}

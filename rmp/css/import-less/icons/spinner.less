@@ -1,0 +1,202 @@
+/* spinner animation
+  rmpSpin for s2 and s4 skins
+  */
+@-webkit-keyframes rmpSpin {
+  0%,
+  39%,
+  100% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes rmpSpin {
+  0%,
+  39%,
+  100% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+}
+
+@keyframes rmpSpin {
+  0%,
+  39%,
+  100% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+}
+
+.rmp-loading-spin-circle {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.rmp-circle {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.rmp-circle::before {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 15%;
+  height: 15%;
+  border-radius: 100%;
+  .animation(rmpSpin 1.2s infinite ease-in-out both);
+}
+
+.rmp-circle-2 {
+  .transform-rotate(30deg);
+}
+
+.rmp-circle-3 {
+  .transform-rotate(60deg);
+}
+
+.rmp-circle-4 {
+  .transform-rotate(90deg);
+}
+
+.rmp-circle-5 {
+  .transform-rotate(120deg);
+}
+
+.rmp-circle-6 {
+  .transform-rotate(150deg);
+}
+
+.rmp-circle-7 {
+  .transform-rotate(180deg);
+}
+
+.rmp-circle-8 {
+  .transform-rotate(210deg);
+}
+
+.rmp-circle-9 {
+  .transform-rotate(240deg);
+}
+
+.rmp-circle-10 {
+  .transform-rotate(270deg);
+}
+
+.rmp-circle-11 {
+  .transform-rotate(300deg);
+}
+
+.rmp-circle-12 {
+  .transform-rotate(330deg);
+}
+
+.rmp-circle-2::before {
+  .animation-delay(-1.1s);
+}
+
+.rmp-circle-3::before {
+  .animation-delay(-1s);
+}
+
+.rmp-circle-4::before {
+  .animation-delay(-0.9s);
+}
+
+.rmp-circle-5::before {
+  .animation-delay(-0.8s);
+}
+
+.rmp-circle-6::before {
+  .animation-delay(-0.7s);
+}
+
+.rmp-circle-7::before {
+  .animation-delay(-0.6s);
+}
+
+.rmp-circle-8::before {
+  .animation-delay(-0.5s);
+}
+
+.rmp-circle-9::before {
+  .animation-delay(-0.4s);
+}
+
+.rmp-circle-10::before {
+  .animation-delay(-0.3s);
+}
+
+.rmp-circle-11::before {
+  .animation-delay(-0.2s);
+}
+
+.rmp-circle-12::before {
+  .animation-delay(-0.1s);
+}
+
+/* rmpBounce for s1 and s3 skins */
+@-webkit-keyframes rmpBounce {
+  0%,
+  100% {
+    .transform-scale(0);
+  }
+
+  50% {
+    .transform-scale(1);
+  }
+}
+
+@-moz-keyframes rmpBounce {
+  0%,
+  100% {
+    .transform-scale(0);
+  }
+
+  50% {
+    .transform-scale(1);
+  }
+}
+
+@keyframes rmpBounce {
+  0%,
+  100% {
+    .transform-scale(0);
+  }
+
+  50% {
+    .transform-scale(1);
+  }
+}
+
+.rmp-loading-spin-bounce {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  opacity: 0.6;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  .border-radius(50%);
+  .animation(rmpBounce 2s infinite ease-in-out);
+}
+
+.rmpBounce2 {
+  .animation-delay(-1s);
+}

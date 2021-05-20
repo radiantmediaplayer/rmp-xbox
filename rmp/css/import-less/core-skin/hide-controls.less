@@ -1,0 +1,16 @@
+/* hide controls layout */
+.rmp-hide-controls
+  > *:not(.rmp-video):not(.rmp-content):not(.rmp-ad-container):not(.rmp-error):not(.rmp-poster):not(.rmp-ad-block-container),
+.rmp-no-display,
+.rmp-no-central-play .rmp-overlay-button,
+.rmp-no-central-play .rmp-mobile-central-ui,
+.rmp-no-loading-spin .rmp-loading-spin,
+.rmp-force-no-show {
+  display: none !important;
+}
+
+/* force hidding of central play button on iOS */
+video.rmp-video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+}

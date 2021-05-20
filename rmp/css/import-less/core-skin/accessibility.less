@@ -1,0 +1,12 @@
+/* Accessibility
+ * outline is added on focus with JavaScript through the rmp-focus class for keyboard navigation
+ * this is for the player container and related items where inset shadows are not rendered */
+.rmp-alt-focus,
+.rmp-related-ui .rmp-alt-focus {
+  .box-shadow(0 0 0 2px @blue);
+}
+
+/* this is for inner player UI elements (play, seekbar, fullscreen buttons) */
+.rmp-focus {
+  .box-shadow(inset 0 0 0 2px @blue);
+}

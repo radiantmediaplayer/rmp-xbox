@@ -1,0 +1,36 @@
+/* rmp-chrome is added to player container while it is active (user is interacting w/ the player)
+ * hence player UI is visible */
+.rmp-chrome .rmp-control-bar,
+.rmp-chrome .rmp-title-area,
+.rmp-chrome .rmp-module,
+.rmp-chrome .rmp-logo,
+.rmp-chrome .rmp-360-nav,
+.rmp-chrome .rmp-playlist-left-arrow,
+.rmp-chrome .rmp-playlist-right-arrow,
+.rmp-chrome .rmp-mobile-central-ui {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* rmp-no-chrome is added to player container (and rmp-chrome removed) while the player is idle
+ * hence player UI is not visible */
+.rmp-no-chrome .rmp-control-bar,
+.rmp-no-chrome .rmp-title-area,
+.rmp-no-chrome .rmp-module,
+.rmp-no-chrome .rmp-logo,
+.rmp-no-chrome .rmp-360-nav,
+.rmp-no-chrome .rmp-playlist-left-arrow,
+.rmp-no-chrome .rmp-playlist-right-arrow,
+.rmp-no-chrome .rmp-mobile-central-ui {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* when player is hidle then we auto-hide the mouse cursor if it is on player */
+.rmp-no-chrome.rmp-container,
+.rmp-no-chrome .rmp-content,
+.rmp-no-chrome .rmp-video,
+.rmp-no-chrome .rmp-poster,
+.rmp-no-chrome .rmp-poster-img {
+  cursor: none;
+}

@@ -1,0 +1,254 @@
+/* playlist slider + player container */
+.rmp-playlist-container {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  .font-rmp();
+  .box-sizing();
+}
+
+.rmp-playlist-container * {
+  .box-sizing();
+}
+
+.rmp-playlist-player-wrapper {
+  float: none;
+}
+
+/* in-player navigation arrows */
+.rmp-playlist-left-arrow {
+  left: 8px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  opacity: 1;
+  visibility: visible;
+  cursor: pointer;
+  .border-radius(4px);
+  .transform-translateY();
+  .transition(~"opacity, visibility");
+}
+
+.rmp-playlist-right-arrow {
+  right: 8px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  opacity: 1;
+  visibility: visible;
+  cursor: pointer;
+  .border-radius(4px);
+  .transform-translateY();
+  .transition(~"opacity, visibility");
+}
+
+/* playlist side menu */
+.rmp-playlist-side-menu {
+  overflow: auto;
+  overflow-x: hidden;
+  position: relative;
+  float: none;
+  height: auto;
+  max-height: 480px;
+  width: 100%;
+}
+
+/* playlist side menu header */
+.rmp-playlist-header {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  height: 32px;
+  line-height: 32px;
+  font-size: 16px;
+  border-bottom: 1px solid @shadow-5;
+}
+
+/* playlist side menu item */
+.rmp-playlist-item {
+  height: 64px;
+  position: relative;
+  cursor: pointer;
+  border-bottom: 1px solid @shadow-5;
+  background: transparent;
+  .transition(~"border-color, background");
+}
+
+.rmp-playlist-item:focus {
+  outline: none;
+}
+
+.rmp-playlist-item:hover {
+  border-color: transparent;
+  background: @shadow-5;
+}
+
+/* playlist side menu item number */
+.rmp-playlist-item-number {
+  position: absolute;
+  left: 0;
+  width: 6%;
+  text-align: center;
+  line-height: 64px;
+  font-size: 14px;
+}
+
+/* playlist side menu item img */
+.rmp-playlist-item-thumbnail-wrapper {
+  position: absolute;
+  top: 50%;
+  width: 15%;
+  height: auto;
+  left: 9%;
+}
+
+.rmp-playlist-item-thumbnail {
+  width: 100%;
+  height: auto;
+  max-height: 49px;
+  max-width: 84px;
+  .transform-translateY();
+}
+
+/* playlist side menu item text section */
+.rmp-playlist-item-text-area {
+  position: absolute;
+  left: 27%;
+  width: 70%;
+  top: 50%;
+  max-height: 100%;
+  overflow: hidden;
+  padding: 2px 2px 2px 0;
+  .transform-translateY();
+}
+
+/* playlist side menu item title */
+.rmp-playlist-item-title {
+  width: 100%;
+  font-size: 14px;
+  .text-ellipsis();
+}
+
+/* playlist side menu item description */
+.rmp-playlist-item-description {
+  width: 100%;
+  opacity: 0.85;
+  font-size: 12px;
+  .line-clamp-ellipsis();
+}
+
+.rmp-playlist-item-active {
+  border-color: transparent;
+  background: @shadow-5;
+}
+
+.rmp-playlist-item-active .rmp-playlist-item-thumbnail {
+  border: 2px solid @accent;
+}
+
+.rmp-playlist-item-active .rmp-playlist-item-number {
+  color: @accent;
+}
+
+/* Audio only playlist */
+.rmp-playlist-audio-only .rmp-poster {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* media queries */
+@media (min-width: 768px) {
+  .rmp-playlist-player-wrapper {
+    width: 480px;
+    height: 270px;
+    float: left;
+  }
+
+  .rmp-playlist-container {
+    width: 720px;
+    height: 270px;
+  }
+
+  .rmp-playlist-side-menu {
+    float: left;
+    width: 240px;
+    height: 270px;
+  }
+
+  .rmp-playlist-item-number {
+    width: 25px;
+  }
+
+  .rmp-playlist-item-thumbnail {
+    max-height: none;
+    max-width: none;
+    height: 100%;
+  }
+
+  .rmp-playlist-item-thumbnail-wrapper {
+    left: 25px;
+    width: 69px;
+    height: 40px;
+  }
+
+  .rmp-playlist-item-text-area {
+    left: 104px;
+    width: 126px;
+  }
+}
+
+@media (min-width: 992px) {
+  .rmp-playlist-player-wrapper {
+    width: 640px;
+    height: 360px;
+    float: left;
+  }
+
+  .rmp-playlist-container {
+    width: 960px;
+    height: 360px;
+  }
+
+  .rmp-playlist-side-menu {
+    float: left;
+    width: 320px;
+    height: 360px;
+  }
+
+  .rmp-playlist-item-number {
+    width: 25px;
+  }
+
+  .rmp-playlist-item-thumbnail-wrapper {
+    left: 25px;
+    width: 84px;
+    height: 49px;
+  }
+
+  .rmp-playlist-item-text-area {
+    left: 119px;
+    width: 179px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .rmp-playlist-player-wrapper {
+    width: 832px;
+    height: 468px;
+    float: left;
+  }
+
+  .rmp-playlist-container {
+    width: 1140px;
+    height: 468px;
+  }
+
+  .rmp-playlist-side-menu {
+    float: left;
+    width: 308px;
+    height: 468px;
+  }
+}

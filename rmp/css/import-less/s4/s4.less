@@ -1,0 +1,593 @@
+/* s4 specific CSS */
+@background: rgba(18, 18, 18, 0.85);
+@button: rgba(255, 255, 255, 1);
+@accent: rgba(29, 233, 182, 1);
+@accent-light: rgba(29, 233, 182, 0.7);
+
+/* adjust borders for s4 skin */
+.rmp-time-total,
+.rmp-current, 
+.rmp-loaded,
+.rmp-desktop-volume-handle,
+.rmp-handle,
+.rmp-desktop-volume-bar,
+.rmp-desktop-volume-bar-container,
+.rmp-quality-hd,
+.rmp-live-dvr .rmp-time-elapsed-text,
+.rmp-ad-info-message {
+  .border-radius(2px);
+}
+
+.rmp-play-pause,
+.rmp-audio-only-volume-icon,
+.rmp-fullscreen,
+.rmp-360-nav,
+.rmp-360-text,
+.rmp-module,
+.rmp-overlay-button,
+.rmp-mobile-central-ui,
+.rmp-loading-spin,
+.rmp-hint,
+.rmp-in-module-hint,
+.rmp-control-bar-hint,
+.rmp-overlay-title-text,
+.rmp-indicator,
+.rmp-overlay-level,
+.rmp-module-fcc-settings,
+.rmp-related-item,
+.rmp-module-overlay-icons,
+.rmp-related-skip-next,
+.rmp-quick-rewind-or-forward,
+.rmp-ad-info,
+.rmp-volume-bar,
+.rmp-desktop-volume-icon,
+.rmp-desktop-volume-indicator,
+.rmp-desktop-volume-hint,
+.rmp-desktop-volume-container,
+.rmp-cue-point-text {
+  .border-radius(4px);
+}
+
+/* colors */
+.rmp-play-pause,
+.rmp-ad-info,
+.rmp-audio-only-volume-icon,
+.rmp-fullscreen,
+.rmp-seek-bar,
+.rmp-time-elapsed,
+.rmp-duration,
+.rmp-quick-rewind-or-forward,
+.rmp-desktop-volume-icon,
+.rmp-related-skip-next {
+  background: @background;
+}
+
+/* .rmp-control-bar */
+.rmp-control-bar {
+  background: transparent !important;
+  margin-bottom: 8px;
+}
+
+/* .rmp-play-pause */
+.rmp-play-pause {
+  width: 8%;
+  left: 1%;
+  height: 40px;
+}
+
+.rmp-small .rmp-play-pause {
+  height: 40px;
+  top: -1px;
+  width: 10%;
+  left: 2%;
+}
+
+.rmp-extrasmall .rmp-play-pause {
+  width: 12%;
+  left: 2%;
+}
+
+.rmp-related-ui .rmp-play-pause,
+.rmp-quick-rewind-or-forward-ui .rmp-play-pause {
+  left: 1%;
+}
+
+.rmp-related-ui.rmp-small .rmp-play-pause,
+.rmp-quick-rewind-or-forward-ui.rmp-small .rmp-play-pause {
+  left: 2%;
+  width: 10%;
+}
+
+.rmp-related-ui.rmp-extrasmall .rmp-play-pause,
+.rmp-quick-rewind-or-forward-ui.rmp-extrasmall .rmp-play-pause {
+  width: 12%;
+  left: 2%;
+}
+
+.rmp-control-bar-hint,
+.rmp-small .rmp-play-pause .rmp-control-bar-hint,
+.rmp-extrasmall .rmp-play-pause .rmp-control-bar-hint,
+.rmp-small .rmp-quick-rewind-or-forward .rmp-control-bar-hint,
+.rmp-extrasmall .rmp-quick-rewind-or-forward .rmp-control-bar-hint {
+  top: -30px;
+}
+
+/* .rmp-time-elapsed */
+.rmp-time-elapsed {
+  left: 19%;
+  height: 32px;
+  line-height: 32px;
+  top: 4px;
+  width: 11%;
+  .border-radius-left-only(4px);
+}
+
+.rmp-live .rmp-time-elapsed {
+  background: none !important;
+}
+
+.rmp-related-ui .rmp-time-elapsed,
+.rmp-quick-rewind-or-forward-ui .rmp-time-elapsed {
+  left: 27.5%;
+}
+
+.rmp-small .rmp-time-elapsed {
+  height: 32px;
+  line-height: 32px;
+  top: 4px;
+  left: 26%;
+  width: 14%;
+}
+
+.rmp-extrasmall .rmp-time-elapsed {
+  height: 32px;
+  line-height: 32px;
+  top: 4px;
+  left: 30%;
+  width: 16%;
+}
+
+.rmp-quick-rewind-and-forward-ui .rmp-time-elapsed {
+  left: 36%;
+}
+
+.rmp-related-ui.rmp-small .rmp-time-elapsed,
+.rmp-quick-rewind-or-forward-ui.rmp-small .rmp-time-elapsed {
+  left: 38%;
+}
+
+.rmp-related-ui.rmp-mobile .rmp-time-elapsed,
+.rmp-quick-rewind-or-forward-ui.rmp-mobile .rmp-time-elapsed {
+  left: 18.5%;
+}
+
+.rmp-quick-rewind-and-forward-ui.rmp-mobile .rmp-time-elapsed {
+  left: 27%;
+}
+
+.rmp-related-ui.rmp-extrasmall .rmp-time-elapsed,
+.rmp-quick-rewind-or-forward-ui.rmp-extrasmall .rmp-time-elapsed {
+  left: 44%;
+}
+
+.rmp-quick-rewind-and-forward-ui.rmp-small .rmp-time-elapsed {
+  left: 50%;
+}
+
+.rmp-quick-rewind-and-forward-ui.rmp-extrasmall .rmp-time-elapsed {
+  left: 58%;
+}
+
+.rmp-casting.rmp-small .rmp-time-elapsed,
+.rmp-casting.rmp-extrasmall .rmp-time-elapsed {
+  display: block;
+}
+
+.rmp-mobile.rmp-small .rmp-time-elapsed,
+.rmp-mobile.rmp-extrasmall .rmp-time-elapsed {
+  left: 2%;
+}
+
+.rmp-mobile.rmp-related-ui.rmp-small .rmp-time-elapsed,
+.rmp-mobile.rmp-quick-rewind-or-forward-ui.rmp-small .rmp-time-elapsed,
+.rmp-mobile.rmp-related-ui.rmp-extrasmall .rmp-time-elapsed,
+.rmp-mobile.rmp-quick-rewind-or-forward-ui.rmp-extrasmall .rmp-time-elapsed {
+  left: 14%;
+}
+
+.rmp-mobile.rmp-quick-rewind-and-forward-ui.rmp-small .rmp-time-elapsed,
+.rmp-mobile.rmp-quick-rewind-and-forward-ui.rmp-extrasmall .rmp-time-elapsed {
+  left: 26%;
+}
+
+/* .rmp-seek-bar */
+.rmp-seek-bar {
+  left: 30%;
+  width: 49%;
+  height: 32px;
+  top: 4px;
+}
+
+.rmp-related-ui .rmp-seek-bar,
+.rmp-quick-rewind-or-forward-ui .rmp-seek-bar {
+  left: 38.5%;
+  width: 40.5%;
+}
+
+.rmp-quick-rewind-and-forward-ui .rmp-seek-bar {
+  left: 47%;
+  width: 32%;
+}
+
+.rmp-small .rmp-seek-bar {
+  left: 40%;
+  width: 32%;
+}
+
+.rmp-mobile .rmp-seek-bar {
+  left: 21%;
+  width: 58%;
+}
+
+.rmp-extrasmall .rmp-seek-bar {
+  left: 46%;
+  width: 22%;
+}
+
+.rmp-mobile.rmp-small .rmp-seek-bar {
+  left: 16%;
+  width: 56%;
+}
+
+.rmp-mobile.rmp-extrasmall .rmp-seek-bar {
+  left: 18%;
+  width: 50%;
+}
+
+.rmp-mobile.rmp-quick-rewind-or-forward-ui .rmp-seek-bar {
+  left: 29%;
+  width: 50%;
+}
+
+.rmp-related-ui.rmp-small .rmp-seek-bar,
+.rmp-quick-rewind-or-forward-ui.rmp-small .rmp-seek-bar {
+  left: 52%;
+  width: 20%;
+}
+
+.rmp-quick-rewind-and-forward-ui.rmp-mobile .rmp-seek-bar {
+  left: 38%;
+  width: 41%;
+}
+
+.rmp-related-ui.rmp-extrasmall .rmp-seek-bar {
+  left: 60%;
+  width: 24%;
+  .border-radius-right-only(4px);
+}
+
+.rmp-quick-rewind-or-forward-ui.rmp-extrasmall .rmp-seek-bar {
+  left: 60%;
+  width: 24%;
+  padding-right: 2%;
+  .border-radius-right-only(4px);
+}
+
+.rmp-quick-rewind-and-forward-ui.rmp-small .rmp-seek-bar {
+  left: 64%;
+  width: 8%;
+}
+
+.rmp-quick-rewind-and-forward-ui.rmp-extrasmall .rmp-seek-bar {
+  left: 74%;
+  width: 10%;
+}
+
+.rmp-mobile.rmp-related-ui.rmp-small .rmp-seek-bar,
+.rmp-mobile.rmp-quick-rewind-or-forward-ui.rmp-small .rmp-seek-bar {
+  left: 28%;
+  width: 44%;
+}
+
+.rmp-mobile.rmp-related-ui.rmp-extrasmall .rmp-seek-bar,
+.rmp-mobile.rmp-quick-rewind-or-forward-ui.rmp-extrasmall .rmp-seek-bar {
+  left: 30%;
+  width: 54%;
+}
+
+.rmp-mobile.rmp-quick-rewind-and-forward-ui.rmp-small .rmp-seek-bar {
+  left: 40%;
+  width: 32%;
+}
+
+.rmp-mobile.rmp-quick-rewind-and-forward-ui.rmp-extrasmall .rmp-seek-bar {
+  left: 42%;
+  width: 42%;
+}
+
+.rmp-time-total {
+  top: 10px;
+  height: 12px;
+}
+
+.rmp-small .rmp-quick-rewind-or-forward .rmp-control-bar-hint,
+.rmp-extrasmall .rmp-quick-rewind-or-forward .rmp-control-bar-hint {
+  display: none;
+}
+
+/* .rmp-indicator */
+.rmp-indicator {
+  top: -38px;
+}
+
+.rmp-seek-bar-thumbnails .rmp-indicator {
+  .border-radius-bottom-only(4px);
+}
+
+/* .rmp-duration */
+.rmp-duration {
+  height: 32px;
+  line-height: 32px;
+  top: 4px;
+  left: 79%;
+  width: 11%;
+  .border-radius-right-only(4px);
+}
+
+.rmp-small .rmp-duration {
+  height: 32px;
+  line-height: 32px;
+  top: 4px;
+  width: 14%;
+  left: 72%;
+  margin-left: 0;
+}
+
+.rmp-extrasmall .rmp-duration {
+  height: 32px;
+  line-height: 32px;
+  top: 4px;
+  width: 16%;
+  left: 68%;
+  margin-left: 0;
+}
+
+.rmp-mobile.rmp-small .rmp-duration {
+  left: 72%;
+}
+
+.rmp-related-ui.rmp-extrasmall .rmp-duration,
+.rmp-quick-rewind-or-forward-ui.rmp-extrasmall .rmp-duration {
+  display: none !important;
+}
+
+/* volume */
+.rmp-desktop-volume-icon {
+  width: 8%;
+}
+
+.rmp-small .rmp-desktop-volume-icon {
+  left: 14%;
+  width: 10%;
+}
+
+.rmp-extrasmall .rmp-desktop-volume-icon {
+  left: 16%;
+  width: 12%;
+}
+
+.rmp-audio-only-volume-icon {
+  width: 7.5%;
+  left: 83%;
+  height: 32px;
+  top: 4px;
+}
+
+.rmp-small .rmp-audio-only-volume-icon {
+  left: 76%;
+  width: 10%;
+}
+
+.rmp-extrasmall .rmp-audio-only-volume-icon {
+  left: 72%;
+  width: 12%;
+}
+
+.rmp-quick-rewind-or-forward-ui.rmp-extrasmall .rmp-audio-only-volume-icon {
+  left: 69%;
+}
+
+.rmp-handle,
+.rmp-desktop-volume-handle {
+  margin-top: -8px;
+  margin-left: -8px;
+  width: 16px;
+  height: 16px;
+}
+
+.rmp-desktop-volume-bar-container {
+  left: 14px;
+  width: 12px;
+}
+
+/* .rmp-fullscreen */
+.rmp-fullscreen {
+  width: 8%;
+  left: 91%;
+  height: 40px;
+}
+
+.rmp-small .rmp-fullscreen,
+.rmp-quick-rewind-or-forward-ui.rmp-mobile.rmp-small .rmp-fullscreen,
+.rmp-quick-rewind-or-forward-ui.rmp-mobile.rmp-extrasmall .rmp-fullscreen {
+  left: 88%;
+  width: 10%;
+}
+
+.rmp-extrasmall .rmp-fullscreen,
+.rmp-extrasmall.rmp-related-ui .rmp-fullscreen,
+.rmp-extrasmall.rmp-quick-rewind-or-forward-ui .rmp-fullscreen {
+  left: 86%;
+  width: 12%;
+}
+
+.rmp-overlay-title-text {
+  display: inline-block;
+  width: 172px;
+  height: 30px;
+  padding-bottom: 0;
+  line-height: 26px;
+  border: 2px solid @button;
+}
+
+.rmp-extrasmall .rmp-overlay-title-text {
+  width: 148px;
+}
+
+.rmp-related-skip-next,
+.rmp-quick-rewind-or-forward {
+  height: 32px;
+  line-height: 32px;
+  top: 4px;
+  width: 7.5%;
+  left: 19%;
+}
+
+.rmp-related-ui.rmp-small .rmp-related-skip-next,
+.rmp-quick-rewind-or-forward-ui.rmp-small .rmp-quick-rewind-or-forward {
+  width: 10%;
+  left: 26%;
+}
+
+.rmp-related-ui.rmp-extrasmall .rmp-related-skip-next,
+.rmp-quick-rewind-or-forward-ui.rmp-extrasmall .rmp-quick-rewind-or-forward {
+  width: 12%;
+  left: 30%;
+}
+
+.rmp-mobile.rmp-related-ui.rmp-small .rmp-related-skip-next,
+.rmp-mobile.rmp-related-ui.rmp-extrasmall .rmp-related-skip-next,
+.rmp-mobile.rmp-quick-rewind-or-forward-ui.rmp-small
+  .rmp-quick-rewind-or-forward,
+.rmp-mobile.rmp-quick-rewind-or-forward-ui.rmp-extrasmall
+  .rmp-quick-rewind-or-forward {
+  left: 2%;
+  width: 10%;
+}
+
+.rmp-quick-rewind-and-forward-ui .rmp-quick-rewind-and-forward {
+  left: 27.5%;
+}
+
+.rmp-quick-rewind-and-forward-ui.rmp-mobile .rmp-quick-rewind-and-forward {
+  left: 18.5%;
+}
+
+.rmp-quick-rewind-and-forward-ui.rmp-small .rmp-quick-rewind-and-forward {
+  left: 38%;
+}
+
+.rmp-quick-rewind-and-forward-ui.rmp-extrasmall .rmp-quick-rewind-and-forward {
+  width: 12%;
+  left: 44%;
+}
+
+.rmp-mobile.rmp-quick-rewind-and-forward-ui.rmp-small
+  .rmp-quick-rewind-and-forward,
+.rmp-mobile.rmp-quick-rewind-and-forward-ui.rmp-extrasmall
+  .rmp-quick-rewind-and-forward {
+  left: 14%;
+}
+
+/* related */
+.rmp-related-ui .rmp-related-skip-preview {
+  top: -156px;
+  left: 0;
+  margin-left: 0;
+}
+
+.rmp-related-ui.rmp-mobile .rmp-seek-bar {
+  left: 29.5%;
+  width: 49.5%;
+}
+
+.rmp-related-ui.rmp-small .rmp-related-skip-preview {
+  top: -138px;
+  left: 0;
+  margin-left: 0;
+}
+
+.rmp-related-skip-preview-up-next {
+  .border-radius-top-only(4px);
+}
+
+.rmp-related-skip-preview-title {
+  .border-radius-bottom-only(4px);
+}
+
+/* 360 */
+.rmp-360-text {
+  text-shadow: 0 2px 1px @shadow-6;
+}
+
+/* thumbnails in seek bar */
+.rmp-seek-bar-thumbnails .rmp-thumbnails {
+  .border-radius-top-only(4px);
+}
+
+/* logo */
+.rmp-logo-bottom-left,
+.rmp-logo-bottom-right,
+.rmp-small .rmp-logo-bottom-left,
+.rmp-small .rmp-logo-bottom-right,
+.rmp-extrasmall .rmp-logo-bottom-left,
+.rmp-extrasmall .rmp-logo-bottom-right {
+  bottom: 48px;
+}
+
+/* Ads CSS */
+.rmp-ad-info {
+  height: 32px;
+  line-height: 32px;
+  top: 4px;
+  left: 19%;
+  min-width: 10%;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.rmp-related-ui .rmp-ad-info {
+  left: 19%;
+}
+
+.rmp-small .rmp-ad-info {
+  left: 26%;
+}
+
+.rmp-extrasmall .rmp-ad-info,
+.rmp-related-ui.rmp-extrasmall .rmp-ad-info,
+.rmp-quick-rewind-or-forward-ui.rmp-extrasmall .rmp-ad-info {
+  left: 30%;
+}
+
+.rmp-ad-info-message {
+  margin-left: 0;
+}
+
+.rmp-ad-container.rmp-ad-overlay {
+  top: -48px;
+}
+
+.rmp-ad-current-time {
+  bottom: -8px;
+}
+
+/* cue point */
+.rmp-cue-point-text {
+  top: -38px;
+}
+
+/* DVR */
+.rmp-live-dvr .rmp-time-elapsed-text {
+  margin-left: 3px;
+}

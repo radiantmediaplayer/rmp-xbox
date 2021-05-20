@@ -1,0 +1,25 @@
+{
+  "name": "rmp-xbox",
+  "version": "1.0.0",
+  "author": "Radiant Media Player <support@radiantmediaplayer.com>",
+  "description": "A demo app for using Radiant Media Player in a Xbox UWP app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/radiantmediaplayer/rmp-xbox.git"
+  },
+  "main": "index.html",
+  "keywords": [
+    "xbox",
+    "html5",
+    "video",
+    "microsoft",
+    "dash",
+    "hls",
+    "playready"
+  ],
+  "bugs": {
+    "url": "https://github.com/radiantmediaplayer/rmp-xbox/issues"
+  },
+  "homepage": "https://www.radiantmediaplayer.com/docs/latest/xbox.html",
+  "license": "MIT"
+}

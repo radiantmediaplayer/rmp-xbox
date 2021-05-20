@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <meta name="description" content="Example for using Radiant Media Player in a UWP Xbox video app">
+  <title>UWP Xbox video app - Radiant Media Player</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta name="robots" content="noindex">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col">
+        <h1>Radiant Media Player</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <img src="images/xbox_32.jpg" width="32" height="32" alt="Xbox icon"> <strong>UWP Xbox Demo
+          Video App</strong>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h3>Select a player</h3>
+        <ul id="demo-list">
+          <li>
+            <a href="ms-appx-web:///mp4.html" id="initial-focus">MP4 VOD player</a>
+          </li>
+          <li>
+            <a href="ms-appx-web:///dash-vod.html">DASH VOD AVC</a>
+          </li>
+          <li>
+            <a href="ms-appx-web:///dash-vod-multiple-audio.html">DASH Multiple audio</a>
+          </li>
+          <li>
+            <a href="ms-appx-web:///dash-vod-hevc.html">DASH VOD HEVC</a>
+          </li>
+          <li>
+            <a href="ms-appx-web:///dash-live.html">DASH LIVE AVC</a>
+          </li>
+          <li>
+            <a href="ms-appx-web:///dash-drm-2.html">DASH DRM 2 PlayReady</a>
+          </li>
+          <li>
+            <a href="ms-appx-web:///dash-drm-3.html">DASH DRM 3 PlayReady</a>
+          </li>
+          <li>
+            <a href="ms-appx-web:///dash-rmp-vast-ads.html">DASH with video ads (rmp-vast)</a>
+          </li>
+          <li>
+            <a href="ms-appx-web:///checkenv.html">Environment API (rmp)</a>
+          </li>
+          <li>
+            <a href="ms-appx-web:///support.html">Environment API (Shaka Player)</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="js/tvjs.js"></script>
+  <script>
+    var initialFocus = document.querySelector('#initial-focus');
+    if (initialFocus) {
+      initialFocus.focus();
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+/*
+  roboto-regular - latin
+  this is the main font for the player
+  first we try to see if the font is not already present on device - if not we load it
+  woff2 - Super Modern Browsers
+  woff - Modern Browsers
+  truetype - Safari, Android, iOS
+  svg - Legacy iOS
+  */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"),
+    url("fonts/roboto-v20-latin-regular.woff2") format("woff2"),
+    url("fonts/roboto-v20-latin-regular.woff") format("woff"),
+    url("fonts/roboto-v20-latin-regular.ttf") format("truetype"),
+    url("fonts/roboto-v20-latin-regular.svg#Roboto") format("svg");
+}
+
+/* player icons file */
+@font-face {
+  font-family: "rmp-font";
+  src: url("fonts/rmp-font.woff2?ed349") format("woff2"),
+    url("fonts/rmp-font.woff?ed349") format("woff"),
+    url("fonts/rmp-font.ttf?ed349") format("truetype"),
+    url("fonts/rmp-font.svg?ed349#rmp-font") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}

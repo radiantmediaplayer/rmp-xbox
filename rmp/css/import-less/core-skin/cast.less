@@ -1,0 +1,76 @@
+/* Google Cast - .rmp-cast is the module for casting - also has the .rmp-module class */
+.rmp-cast {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: block;
+  opacity: 1;
+}
+
+/* the Google-provided cast button within the module */
+google-cast-launcher {
+  padding: 0;
+  margin: 0;
+  border: none;
+  display: inline-block;
+  background: transparent;
+  width: 26px;
+  height: 26px;
+  margin-top: 7px;
+  cursor: pointer;
+  outline: none;
+  float: none;
+  text-align: center;
+  .filter-drop-shadow();
+}
+
+/* when casting is engaged .rmp-casting is applied on player container (.rmp-container) */
+.rmp-casting-module-overlay-open .rmp-cast-diplay-message-area {
+  display: none !important;
+}
+
+.rmp-casting .rmp-cast-diplay-message-area {
+  display: block;
+}
+
+/* when casting all modules, logo, fullscreen, chapters should be hidden ... */
+.rmp-casting .rmp-module,
+.rmp-casting .rmp-logo,
+.rmp-casting .rmp-loaded,
+.rmp-casting .rmp-fullscreen,
+.rmp-casting .rmp-title-area {
+  display: none !important;
+}
+
+/* ... except for the closed captions, related, audio and cast modules
+ * on Android Google Cast module is adjusted with physical devices */
+.rmp-casting:not(.rmp-casting-module-overlay-open) .rmp-module.rmp-audio,
+.rmp-casting:not(.rmp-casting-module-overlay-open) .rmp-module.rmp-captions,
+.rmp-casting:not(.rmp-casting-module-overlay-open) .rmp-module.rmp-cast,
+.rmp-casting:not(.rmp-casting-module-overlay-open) .rmp-module.rmp-related,
+.rmp-casting:not(.rmp-casting-module-overlay-open) .rmp-control-bar,
+.rmp-casting:not(.rmp-casting-module-overlay-open):not(.rmp-waiting)
+  .rmp-mobile-central-ui,
+.rmp-casting:not(.rmp-casting-module-overlay-open) .rmp-playlist-left-arrow,
+.rmp-casting:not(.rmp-casting-module-overlay-open) .rmp-playlist-right-arrow {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* we do not support casting captions and multi audio tracks with Google Cast Cordova as of now */
+.rmp-casting.rmp-casting-cordova .rmp-module.rmp-captions,
+.rmp-casting.rmp-casting-cordova .rmp-module.rmp-audio {
+  display: none !important;
+}
+
+.rmp-casting .rmp-module-overlay {
+  z-index: 1;
+}
+
+.rmp-casting .rmp-poster {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
