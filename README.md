@@ -1,4 +1,7 @@
-# rmp-xbox
+# DEPRECATED
+Support for building Xbox apps with Radiant Media Player has been deprecated with version 9.9.0. 
+
+## rmp-xbox
 
 A demo app for using [Radiant Media Player](https://www.radiantmediaplayer.com) in a Xbox UWP app. We support the following Xbox devices:
 
@@ -8,7 +11,7 @@ A demo app for using [Radiant Media Player](https://www.radiantmediaplayer.com) 
 
 For a list of supported features and more information on using Radiant Media Player in a Xbox UWP app [visit this link](https://www.radiantmediaplayer.com/docs/latest/xbox.html).
 
-## Usage instructions
+### Usage instructions
 
 - Install Visual Studio 2017.
 - Go to File > New > Project.
@@ -26,15 +29,15 @@ This demo app can be used as a start point to develop more advanced Xbox UWP app
 
 This demo app has been tested on Xbox Series S with OS 10.0.19041.7771.
 
-## Alternative to using Visual Studio 2017
+### Alternative to using Visual Studio 2017
 
 As an alternative to using JavaScript UWP app in Visual Studio 2017, you can build a native app embedding a WebView. [Guidelines for this use-case can be reviewed here](https://github.com/google/generic-webdriver-server/blob/main/backends/xboxone/how-it-works.md#the-container-app).
 
-## License for rmp-xbox
+### License for rmp-xbox
 
 rmp-xbox is released under MIT.
 
-## License for Radiant Media Player
+### License for Radiant Media Player
 
 Radiant Media Player is a commercial HTML5 media player, not covered by the above MIT license.
 
